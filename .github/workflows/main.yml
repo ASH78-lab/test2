@@ -1,7 +1,9 @@
-name: Daily_bot
+name: Daily_bot2
 
 on: 
     push:
+    schedule:
+        - cron: '* * * * *'
 
 env:
     TOKEN1: ${{ secrets.TOKEN1 }}
@@ -15,10 +17,11 @@ env:
 jobs:
     Daily-Run:
         runs-on: ubuntu-latest
+
         steps:
             - name: Checkout Code
-              uses: actions/checkout@v4
+            uses: actions/checkout@v4
             - name: Install Dependencies
-              run: pip install -r requirements.txt 
+            run: pip install -r requirements.txt 
             - name: Run App
-              run: python app.py
+            run: python app.py 
