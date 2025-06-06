@@ -15,20 +15,28 @@ print(start2)
 
 
 import os
+
+
 from selenium import webdriver
+chrome_options = webdriver.ChromeOptions()
+chrome_options.add_argument("--no-sandbox")
+chrome_options.add_argument("--headless")
+chrome_options.add_argument("--disable-gpu")
+driver = webdriver.Chrome(options=chrome_options)
+
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
 from selenium.webdriver.common.keys import Keys
 from dotenv import load_dotenv
-load_dotenv()
+load_dotenv(git)
 from selenium.common.exceptions import NoSuchElementException
 
 driver = webdriver.Chrome()
 driver.set_window_size(1800, 1000) 
 
-driver.set_window_size(1800, 800) 
+
 
 driver.get("https://www.meteopt.com/modelos/gfs?lat=55.752&lon=37.616&lang=en")
 time.sleep(8)
