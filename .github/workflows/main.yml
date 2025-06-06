@@ -5,16 +5,14 @@ on:
     schedule:
         - cron: '0 15 * * *'
 
-env:
 
-    TOKEN2: ${{ secrets.TOKEN2 }}
 
 
 
 
 jobs:
     Daily-Run:
-        runs-on: windows-latest
+        runs-on: ubuntu-latest
 
         steps:
             - name: Checkout Code
