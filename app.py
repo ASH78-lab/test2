@@ -133,7 +133,8 @@ import pandas as pd
 df = pd.DataFrame(data, columns=header)
 del df['Date/Hour']
 
-#df.to_excel('/Users/JOHN/Desktop/resurses/weather289.xlsx', sheet_name='Budgets', index=False)
+df.to_excel('/work1.xlsx', sheet_name='Budgets', index=False)
+
 driver.quit()
 
 current_datetime = str(datetime.now())
@@ -152,32 +153,3 @@ print(start2)
 
 
 
-
-#gc = gspread.service_account(filename='C:/Users/JOHN/Documents/cred4.json')
-TOKEN1 = os.getenv('TOKEN1')
-TOKEN2 = os.getenv('TOKEN2')
-TOKEN3 = os.getenv('TOKEN3')
-TOKEN4 = os.getenv('TOKEN4')
-TOKEN5 = os.getenv('TOKEN5')
-
-credentials={
-  "type": "service_account",
-  "project_id": "avid-stone-461407-q5",
-  "private_key_id": TOKEN1,
-  "private_key": TOKEN2,
-  "client_email": TOKEN3,
-  "client_id": TOKEN4,
-  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-  "token_uri": "https://oauth2.googleapis.com/token",
-  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-  "client_x509_cert_url": TOKEN5,
-  "universe_domain": "googleapis.com"
-}
-
-
-
-
-
-import gspread
-gc = gspread.service_account_from_dict(credentials)
-wer = gc.open("Test789").sheet1
