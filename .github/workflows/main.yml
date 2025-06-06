@@ -3,6 +3,13 @@ name: Daily_bot
 on: 
     push:
 
+env:
+    TOKEN1: ${{ secrets.TOKEN1 }}
+    TOKEN2: ${{ secrets.TOKEN2 }}
+    TOKEN3: ${{ secrets.TOKEN3 }}
+    TOKEN4: ${{ secrets.TOKEN4 }}
+    TOKEN5: ${{ secrets.TOKEN5}}
+
 
 
 jobs:
