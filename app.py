@@ -133,7 +133,7 @@ import pandas as pd
 df = pd.DataFrame(data, columns=header)
 del df['Date/Hour']
 
-df.to_excel('/work1.xlsx', sheet_name='Budgets', index=False)
+df.to_excel('work1.xlsx', sheet_name='Budgets', index=False)
 
 driver.quit()
 
