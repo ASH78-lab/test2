@@ -38,7 +38,7 @@ from selenium.common.exceptions import NoSuchElementException
 
 driver.set_window_size(1800, 1000) 
 
-
+df = pd.read_excel('work.xlsx')
 
 driver.get("https://www.meteopt.com/modelos/gfs?lat=55.752&lon=37.616&lang=en")
 time.sleep(8)
