@@ -154,7 +154,7 @@ print(start2)
 
 TOKEN2 = os.getenv('TOKEN2')
 
-
+import json
 credentials={
   "type": "service_account",
   "project_id": "avid-stone-461407-q5",
@@ -170,18 +170,9 @@ credentials={
 }
 
 
-import jwt
-from jwt.algorithms import RSAAlgorithm
 
-IDjwt = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWUsImlhdCI6MTUxNjIzOTAyMn0.KMUFsIDTnFmyG3nMiGM6H9FNFUROf3wh7SmqJp-QV30'
-
-
-public_key = RSAAlgorithm.from_jwk(credentials)
-
-decoded = jwt.decode(IDjwt, public_key, algorithms='RS256')
-                     
 import gspread
-gc = gspread.service_account_from_dict(decoded)
+gc = gspread.service_account_from_dict(credentials)
 
 
 wer = gc.open("Test789").sheet1
