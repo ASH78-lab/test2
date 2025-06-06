@@ -133,7 +133,7 @@ import pandas as pd
 df = pd.DataFrame(data, columns=header)
 del df['Date/Hour']
 
-df.to_excel('work1.xlsx', sheet_name='Budgets', index=False)
+
 
 driver.quit()
 
@@ -150,6 +150,8 @@ io=kl[0]
 start2=f+'/'+d+'/'+c+' '+io
 start2= datetime.strptime(start2, '%d/%m/%y %H:%M:%S')
 print(start2)
+print(df)
+
 
 
 
