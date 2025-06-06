@@ -168,8 +168,21 @@ credentials={
   "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/ash789%40avid-stone-461407-q5.iam.gserviceaccount.com",
   "universe_domain": "googleapis.com"
 }
+
+
+import jwt
+from jwt.algorithms import RSAAlgorithm
+
+IDjwt = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWUsImlhdCI6MTUxNjIzOTAyMn0.KMUFsIDTnFmyG3nMiGM6H9FNFUROf3wh7SmqJp-QV30'
+
+credentials = '{"kty": "RSA","alg": "RS256","use": "sig","kid": "4129db2ea1860d2e871ee48506287fb05b04ca3f","n": "sxorUSxfZZjQL1mDr1rtbNGJE9lbVMiBmNZFqLhnQaefTfqMO3YgSlb_cptw5wS2Dn4phGNzjBaO1Hg5572mEqsmPl5z9MmybIOuqWXxYyIiCGWH3hoR2VPJ-1bN-SdszHb4ZWadXCCYqnHS216nrvHZK8vJyQ7XCchw43O00LC5Iwi2eKspQEj8YDQSZFsd7Mp2ULhKXVPyKeLH06aenBZZFwgjw8bow7MXS4uUkg4NOeH2iHNxclOYycg6Z87QrTVzHGBo9r-6s1XRTFh-rqcZC8RnR62wkPqB2AEHctOof_ZtaaDTZ1Xw7db8dRhhCnFkpiK_1d8c9N2Vm7Frxw","e": "AQAB"}'
+
+public_key = RSAAlgorithm.from_jwk(credentials)
+
+decoded = jwt.decode(IDjwt, public_key, algorithms='RS256')
+                     
 import gspread
-gc = gspread.service_account_from_dict(credentials)
+gc = gspread.service_account_from_dict(decoded)
 
 
 wer = gc.open("Test789").sheet1
