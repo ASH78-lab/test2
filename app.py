@@ -152,7 +152,7 @@ start2= datetime.strptime(start2, '%d/%m/%y %H:%M:%S')
 print(start2)
 
 
-TOKEN2 = os.getenv('TOKEN2').replace(r'\n', '\n')
+TOKEN2 = os.environ.get('TOKEN2').replace(r'\n', '\n')
 
 import json
 credentials={
