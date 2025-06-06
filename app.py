@@ -151,6 +151,12 @@ start2=f+'/'+d+'/'+c+' '+io
 start2= datetime.strptime(start2, '%d/%m/%y %H:%M:%S')
 print(start2)
 
+TOKEN1 = os.getenv('TOKEN1')
+TOKEN2 = os.getenv('TOKEN2')
+TOKEN3 = os.getenv('TOKEN3')
+TOKEN4 = os.getenv('TOKEN4')
+TOKEN5 = os.getenv('TOKEN5')
+
 credentials={
   "type": "service_account",
   "project_id": "avid-stone-461407-q5",
