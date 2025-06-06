@@ -171,10 +171,20 @@ credentials={"type": "service_account",
   "universe_domain": "googleapis.com"
 }
 
+from cryptography.hazmat.primitives import serialization
+from cryptography.hazmat.backends import default_backend
+
+pem_bytes = TOKEN2
+passphrase = b"abc123"
+
+private_key = serialization.load_pem_private_key(
+    pem_bytes, password=passphrase, backend=default_backend()
+)
+encoded = jwt.encode(credentials, private_key, algorithm="RS256")
 
 
 import gspread
-gc = gspread.service_account_from_dict(credentials)
+gc = gspread.service_account_from_dict(encoded)
 
 
 wer = gc.open("Test789").sheet1
