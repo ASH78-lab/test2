@@ -38,7 +38,7 @@ from selenium.common.exceptions import NoSuchElementException
 
 driver.set_window_size(1800, 1000) 
 
-df = pd.read_excel('work.xlsx')
+
 
 driver.get("https://www.meteopt.com/modelos/gfs?lat=55.752&lon=37.616&lang=en")
 time.sleep(8)
@@ -136,7 +136,7 @@ df = pd.DataFrame(data, columns=header)
 del df['Date/Hour']
 
 df.to_excel('work.xlsx', sheet_name='Budgets', index=False)
-
+print(df)
 driver.quit()
 
 current_datetime = str(datetime.now())
