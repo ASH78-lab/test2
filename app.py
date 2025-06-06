@@ -154,37 +154,8 @@ start2= datetime.strptime(start2, '%d/%m/%y %H:%M:%S')
 print(start2)
 
 
-TOKEN2 = os.getenv('TOKEN2')
-
-
-
-credentials={"type": "service_account",
-  "project_id": "avid-stone-461407-q5",
-  "private_key_id": "440d864051de61f4b6463f10f8006898192b7420",
-  "private_key": TOKEN2,
-  "client_email": "ash789@avid-stone-461407-q5.iam.gserviceaccount.com",
-  "client_id": "116197129399001621585",
-  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-  "token_uri": "https://oauth2.googleapis.com/token",
-  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/ash789%40avid-stone-461407-q5.iam.gserviceaccount.com",
-  "universe_domain": "googleapis.com"
-}
-
-from cryptography.hazmat.primitives import serialization
-from cryptography.hazmat.backends import default_backend
-
-pem_bytes = TOKEN2
-passphrase = b"abc123"
-
-private_key = serialization.load_pem_private_key(
-    pem_bytes, password=passphrase, backend=default_backend()
-)
-encoded = jwt.encode(credentials, private_key, algorithm="RS256")
-
-
 import gspread
-gc = gspread.service_account_from_dict(encoded)
+gc = gspread.service_account(filename='cred4.json')
 
 
 wer = gc.open("Test789").sheet1
