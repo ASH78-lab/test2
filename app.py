@@ -135,7 +135,7 @@ import pandas as pd
 df = pd.DataFrame(data, columns=header)
 del df['Date/Hour']
 
-
+df.to_excel('work.xlsx', sheet_name='Budgets', index=False)
 
 driver.quit()
 
@@ -154,12 +154,7 @@ start2= datetime.strptime(start2, '%d/%m/%y %H:%M:%S')
 print(start2)
 
 
-import gspread
-gc = gspread.service_account(filename='cred4.json')
 
-
-wer = gc.open("Test789").sheet1
-wer.update([df.columns.values.tolist()]+df.values.tolist())
 
 
 
