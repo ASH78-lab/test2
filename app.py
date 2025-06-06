@@ -24,16 +24,16 @@ chrome_options.add_argument("--headless")
 chrome_options.add_argument("--disable-gpu")
 driver = webdriver.Chrome(options=chrome_options)
 
+
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
 from selenium.webdriver.common.keys import Keys
-from dotenv import load_dotenv
-load_dotenv()
+
 from selenium.common.exceptions import NoSuchElementException
 
-driver = webdriver.Chrome()
+
 driver.set_window_size(1800, 1000) 
 
 
