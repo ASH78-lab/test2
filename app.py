@@ -150,7 +150,25 @@ io=kl[0]
 start2=f+'/'+d+'/'+c+' '+io
 start2= datetime.strptime(start2, '%d/%m/%y %H:%M:%S')
 print(start2)
-print(df)
+
+credentials={
+  "type": "service_account",
+  "project_id": "avid-stone-461407-q5",
+  "private_key_id": TOKEN1,
+  "private_key": TOKEN2,
+  "client_email": TOKEN3,
+  "client_id": TOKEN4,
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": TOKEN5,
+  "universe_domain": "googleapis.com"
+}
+import gspread
+gc = gspread.service_account_from_dict(credentials)
+
+wer = gc.open("Test789").sheet1
+wer.update([df.columns.values.tolist()]+df.values.tolist())
 
 
 
