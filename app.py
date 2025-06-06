@@ -30,7 +30,7 @@ from selenium.webdriver.support import expected_conditions as EC
 import time
 from selenium.webdriver.common.keys import Keys
 from dotenv import load_dotenv
-load_dotenv(git)
+load_dotenv()
 from selenium.common.exceptions import NoSuchElementException
 
 driver = webdriver.Chrome()
