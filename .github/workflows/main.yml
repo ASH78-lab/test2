@@ -3,10 +3,14 @@ name: Daily_bot2
 on: 
     push:
     schedule:
-        - cron: '0 15 * * *'
+        - cron: '* * * * *'
 
-
-
+env:
+    TOKEN1: ${{ secrets.TOKEN1 }}
+    TOKEN2: ${{ secrets.TOKEN2 }}
+    TOKEN3: ${{ secrets.TOKEN3 }}
+    TOKEN4: ${{ secrets.TOKEN4 }}
+    TOKEN5: ${{ secrets.TOKEN5}}
 
 
 
