@@ -90,6 +90,9 @@ credentials={
 import gspread
 gc = gspread.service_account_from_dict(credentials)
 
+wer = gc.open("Test789").sheet1
+wer.update([df.columns.values.tolist()]+df.values.tolist())
+
 
 
 
