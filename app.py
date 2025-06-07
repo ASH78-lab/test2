@@ -135,7 +135,7 @@ import pandas as pd
 df = pd.DataFrame(data, columns=header)
 del df['Date/Hour']
 
-df.to_excel('work.xlsx', sheet_name='Budgets', index=False)
+df.to_csv('output.csv')
 print(df)
 driver.quit()
 
