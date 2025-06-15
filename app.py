@@ -38,7 +38,7 @@ time.sleep(10)
 
 driver.find_element(By.TAG_NAME,'body').send_keys(Keys.END)
 
-time.sleep(16)
+time.sleep(36)
 
 link=[
 'https://www.pin880.com/en/standard/soccer/england-efl-cup',
