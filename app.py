@@ -79,6 +79,7 @@ link=[
     
 ]
 c=driver.find_elements(By.CLASS_NAME, 'total-events')
+print(len(с))
 c2=driver.find_element(By.CLASS_NAME, 'MainStyled-sc-p8mupa-1').find_elements(By.CLASS_NAME,'item')
 
 c3=[]
