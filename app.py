@@ -26,7 +26,7 @@ driver = webdriver.Chrome(options=chrome_options)
 
 
 
-driver.set_window_size(1800, 1000)
+driver.set_window_size(1800, 1300)
 
 
 driver.get("https://www.pin880.com/en/standard/soccer/leagues")
@@ -38,7 +38,7 @@ time.sleep(10)
 
 driver.find_element(By.TAG_NAME,'body').send_keys(Keys.END)
 
-time.sleep(5)
+time.sleep(6)
 
 link=[
 'https://www.pin880.com/en/standard/soccer/england-efl-cup',
