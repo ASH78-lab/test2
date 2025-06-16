@@ -11,7 +11,10 @@ from selenium.webdriver.firefox.options import Options
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import TimeoutException
 
-
+import os
+date_new53 = str(datetime.now())
+print(date_new53)
+a123=time.time()
 
 
 
@@ -311,6 +314,10 @@ for i in all_pin:
                             u5o255="05" 
                         elif r255=="JUN":
                             u5o255="06" 
+                        elif r255=="JUL":
+                            u5o255="07" 
+                        elif r255=="AUG":
+                            u5o255="08" 
                             
                         ert=c255+'.'+u5o255+'.'+ert[2]
             
@@ -415,6 +422,50 @@ df = pd.DataFrame(data, columns=header)
 df = df.loc[df['1'] != '-']
 print(df)
 driver.quit()
+date_new533 = str(datetime.now())
+print(date_new533)
+
+b123=time.time()
+delta1=b123-a123
+name_fun='Pinnacle'
+data=[]
+data.append([date_new53,date_new533,delta1,name_fun])
+
+
+header = ['run',
+    'end',
+    'delta',
+    'name']
+df2 = pd.DataFrame(data, columns=header)
+print(df,df2)
+TOKEN2 = os.getenv('TOKEN2')
+TOKEN1="440d864051de61f4b6463f10f8006898192b7420"
+TOKEN3="ash789@avid-stone-461407-q5.iam.gserviceaccount.com"
+TOKEN4 ="116197129399001621585"
+TOKEN5="https://www.googleapis.com/robot/v1/metadata/x509/ash789%40avid-stone-461407-q5.iam.gserviceaccount.com"
+
+credentials={
+  "type": "service_account",
+  "project_id": "avid-stone-461407-q5",
+  "private_key_id": TOKEN1,
+  "private_key": TOKEN2,
+  "client_email": TOKEN3,
+  "client_id": TOKEN4,
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": TOKEN5,
+  "universe_domain": "googleapis.com"
+}
+
+import gspread
+gc = gspread.service_account_from_dict(credentials)
+
+wer = gc.open("Test789").sheet1
+wer.update([df.columns.values.tolist()]+df.values.tolist())
+
+wer2 = gc.open("Test789").sheet2
+wer2.update([df2.columns.values.tolist()]+df2.values.tolist())
 
 
 
