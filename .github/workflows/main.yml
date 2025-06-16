@@ -1,7 +1,7 @@
 name: Run Selenium Scraper
 
 on:
-  push
+  push:
   schedule: 
     - cron: '0 15 * * *' # Runs every day at 3pm.
 
