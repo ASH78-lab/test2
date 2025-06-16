@@ -31,6 +31,7 @@ get_title = driver.title
 
 # Printing the title of this URL
 print(get_title)
+print(driver.find_element(By.TAG_NAME,'body').text)
 driver.quit()
 
 
