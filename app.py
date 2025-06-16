@@ -8,7 +8,9 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import NoSuchElementException, TimeoutException
 from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.core.os_manager import ChromeType
+from selenium.webdriver.common.keys import Keys
 import time
+
 
 options = Options()
 options.add_argument('--headless')
