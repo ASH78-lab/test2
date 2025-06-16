@@ -1,9 +1,10 @@
 name: Run Selenium Scraper
 
 on:
+  push
   schedule: 
     - cron: '0 15 * * *' # Runs every day at 3pm.
-  workflow_dispatch:
+
 
 jobs:
   scrape:
