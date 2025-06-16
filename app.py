@@ -20,6 +20,11 @@ driver = webdriver.Chrome(options=chrome_options)
 
 driver.set_window_size(1800, 1000)
 driver.get("https://www.pin880.com/en/standard/soccer/leagues")
+time.sleep(10)
+driver.find_element(By.TAG_NAME,'body').send_keys(Keys.END)
+    
+time.sleep(5)
+c=driver.find_elements(By.CLASS_NAME, 'total-events')
 driver.quit()
 
 
