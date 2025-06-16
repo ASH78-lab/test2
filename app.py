@@ -464,8 +464,8 @@ gc = gspread.service_account_from_dict(credentials)
 wer = gc.open("Test789").sheet1
 wer.update([df.columns.values.tolist()]+df.values.tolist())
 
-wer2 = gc.open("Test789").sheet2
-wer2.update([df2.columns.values.tolist()]+df2.values.tolist())
+wks2 = gc.open("Test789").get_worksheet(1)
+wks2.update([df2.columns.values.tolist()]+df2.values.tolist())
 
 
 
