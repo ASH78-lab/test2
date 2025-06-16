@@ -1,35 +1,26 @@
-from selenium.webdriver import Chrome
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.common.by import By
+import pandas as pd
 from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import NoSuchElementException, TimeoutException
-from webdriver_manager.chrome import ChromeDriverManager
-from webdriver_manager.core.os_manager import ChromeType
-
-options = Options()
-options.add_argument('--headless')
-options.add_argument('--no-sandbox')
-options.add_argument('--disable-dev-shm-usage')
-options.add_argument('--disable-gpu')
-options.add_argument('--disable-extensions')
-options.add_argument('--start-maximized')
-# Memory optimization
-options.add_argument('--disk-cache-size=1')
-options.add_argument('--media-cache-size=1')
-options.add_argument('--incognito')
-options.add_argument('--remote-debugging-port=9222')
-options.add_argument('--aggressive-cache-discard')
+import time
+from selenium.webdriver.common.keys import Keys
 
 
-    
-driver = webdriver.Chrome( options=options)
-driver.get('google.com')
 
+
+chrome_options = webdriver.ChromeOptions()
+chrome_options.add_argument("--no-sandbox")
+chrome_options.add_argument("--headless")
+chrome_options.add_argument("--disable-gpu")
+driver = webdriver.Chrome(options=chrome_options)
+
+
+
+
+driver.set_window_size(1800, 1000)
+driver.get("https://www.pin880.com/en/standard/soccer/leagues")
 driver.quit()
-
 
 
 
