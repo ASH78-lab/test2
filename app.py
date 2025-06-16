@@ -81,7 +81,7 @@ link=[
 
 c=driver.find_elements(By.CLASS_NAME, 'total-events')
 
-c2=driver.find_element(By.CLASS_NAME, 'MainStyled-sc-p8mupa-1').find_elements(By.CLASS_NAME,'item')
+c2=driver.find_element(By.CSS_SELECTOR, '#topContainer > div > div.RowInline-sc-415fwo-0.Row-sc-415fwo-2.Wrapper-sc-11ugq6k-1.jlqfFP.hktPYH.lblvAq > div > main > div > div > div:nth-child(3) > div > a')
 
 
 
