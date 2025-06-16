@@ -38,7 +38,7 @@ time.sleep(10)
 
 driver.find_element(By.TAG_NAME,'body').send_keys(Keys.END)
 
-time.sleep(36)
+time.sleep(10)
 
 link=[
 'https://www.pin880.com/en/standard/soccer/england-efl-cup',
@@ -78,6 +78,7 @@ link=[
 'https://www.pin880.com/en/standard/soccer/international-friendlies'
     
 ]
+
 c=driver.find_elements(By.CLASS_NAME, 'total-events')
 
 c2=driver.find_element(By.CLASS_NAME, 'MainStyled-sc-p8mupa-1').find_elements(By.CLASS_NAME,'item')
