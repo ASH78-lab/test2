@@ -6,6 +6,20 @@ from selenium.webdriver.support import expected_conditions as EC
 import time
 from selenium.webdriver.common.keys import Keys
 
+import requests
+from selenium.webdriver.firefox.options import Options
+from selenium.common.exceptions import NoSuchElementException
+from selenium.common.exceptions import TimeoutException
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -399,6 +413,7 @@ header = ['date',
  'Столбец11']
 df = pd.DataFrame(data, columns=header)
 df = df.loc[df['1'] != '-']
+print(df)
 driver.quit()
 
 
