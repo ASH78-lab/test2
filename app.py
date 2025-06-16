@@ -26,6 +26,11 @@ driver.find_element(By.TAG_NAME,'body').send_keys(Keys.END)
 time.sleep(5)
 c=driver.find_elements(By.CLASS_NAME, 'total-events')
 print(len(c))
+
+get_title = driver.title
+
+# Printing the title of this URL
+print(get_title)
 driver.quit()
 
 
