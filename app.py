@@ -6,8 +6,8 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import NoSuchElementException, TimeoutException
-from webdriver_manager.chrome import ChromeDriverManager
-from webdriver_manager.core.os_manager import ChromeType
+#from webdriver_manager.chrome import ChromeDriverManager
+#from webdriver_manager.core.os_manager import ChromeType
 
 options = Options()
 options.add_argument('--headless')
