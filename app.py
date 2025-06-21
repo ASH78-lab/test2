@@ -390,7 +390,7 @@ for i in all_pin:
                 try:
                     ert10=driver.find_element(By.XPATH,f'/html/body/div[2]/div[1]/div[2]/main/div/div[4]/div[2]/div/div[{j}]/div[3]/div[2]/button/span[2]').text
                     
-                    ert10=float(ert10)
+                    #ert10=float(ert10)
                     
                 except NoSuchElementException:
                     ert10='-'
