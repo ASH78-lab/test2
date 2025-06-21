@@ -465,7 +465,13 @@ wer = gc.open("Test789").sheet1
 wer.update([df.columns.values.tolist()]+df.values.tolist())
 
 wks2 = gc.open("Test789").get_worksheet(1)
-wks2.update([df2.columns.values.tolist()]+df2.values.tolist())
+list_of_lists = wer2.get_all_values()
+df5 = pd.DataFrame(list_of_lists)
+new_header = df5.iloc[0]
+df5 = df5[1:]
+df5.rename(columns=new_header, inplace=True)
+df7=pd.concat([df5,df2])
+wks2.update([df7.columns.values.tolist()]+df7.values.tolist())
 
 
 
