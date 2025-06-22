@@ -108,14 +108,14 @@ from datetime import datetime
 current_datetime = str(datetime.now())
 b=current_datetime.split("-")
 c=b[0]
-d=b[1]
+d=str(int(b[1])+3)
 e=b[2].split(" ")
 f=e[0]
 g=e[1]
 kl=g.split(".")
 io=kl[0]
 date_new256=f+'.'+d+'.'+c+'  '+io
-print(date_new256)
+
 #---------------------------------------------------
 
 
