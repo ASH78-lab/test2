@@ -331,8 +331,16 @@ for i in all_pin:
              
                 try:
                         ert2=driver.find_element(By.XPATH,f'/html/body/div[2]/div[1]/div[2]/main/div/div[4]/div[2]/div/div[{j}]/div[1]/div/a/div/div/div[3]').text
+                        ert209=ert2.split(:)
+                        ert210=int(ert209[0])+3
+                        ert211=str(ert210)+ert209[1]
+                        
+                        
+                    
+                        
+                    
                 except NoSuchElementException:
-                        ert2='-'
+                        ert211='-'
                         
                 try:
                     ert3=driver.find_element(By.XPATH,f'/html/body/div[2]/div[1]/div[2]/main/div/div[4]/div[2]/div/div[{j}]/div[1]/div/a/div/div/div[1]/span').text
@@ -397,7 +405,7 @@ for i in all_pin:
                     ert10='-'
                 ert11=date_new256
                         
-                data.append([ert,ert2,tournemebt,ert3,ert4,ert5,ert6,ert7,ert8,ert9,ert10,ert11])
+                data.append([ert,ert211,tournemebt,ert3,ert4,ert5,ert6,ert7,ert8,ert9,ert10,ert11])
             except (NoSuchElementException,IndexError):
                 pass
 
