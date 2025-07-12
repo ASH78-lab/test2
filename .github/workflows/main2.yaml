@@ -1,4 +1,4 @@
-name: Daily_bot
+name: Daily_bot2
 
 on: 
     push:
