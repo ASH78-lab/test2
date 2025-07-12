@@ -201,6 +201,10 @@ for i in all_pin:
                             u5o255="05" 
                         elif r255=="JUN":
                             u5o255="06" 
+                        elif r255=="JUL":
+                            u5o255="07" 
+                        elif r255=="AUG":
+                            u5o255="08" 
                         
                         ert=c255+'.'+u5o255+'.'+ert[2]        
             
@@ -255,6 +259,10 @@ for i in all_pin:
                             u5o255="05" 
                         elif r255=="JUN":
                             u5o255="06" 
+                        elif r255=="JUL":
+                            u5o255="07" 
+                        elif r255=="AUG":
+                            u5o255="08" 
                         
                         ert=c255+'.'+u5o255+'.'+ert[2]
             
