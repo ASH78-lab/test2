@@ -124,6 +124,7 @@ def pin_tod():
     new=[]
     for i in abc:
         URL = i
+        time.sleep(1)
         req = requests.get(URL, headers=headers)
         print(f"Status Code: {req.status_code}")
         src = req.text
