@@ -211,6 +211,7 @@ def pin_tod():
     #---------------------------------------
     data=[]
     for i in new:
+      print(i)
         driver.get(i)
         time.sleep(11)
             
