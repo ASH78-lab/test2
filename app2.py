@@ -32,6 +32,7 @@ from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import TimeoutException
 
 def pin_tod():
+    import time
     import requests
     from bs4 import BeautifulSoup
     import pandas as pd
@@ -123,6 +124,7 @@ def pin_tod():
         
     new=[]
     for i in abc:
+        
         URL = i
         time.sleep(1)
         req = requests.get(URL, headers=headers)
