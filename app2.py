@@ -209,6 +209,7 @@ def pin_tod():
         
         
     #---------------------------------------
+    print(new)
     data=[]
     for i in new:
         print(i)
@@ -549,6 +550,7 @@ df5=df5[['col1','col2']]
 df5=df5[df5['col2']=='pin']
 znach=int(df5['col1'])
 if znach==1:
+    print('znach=1')
     pin_tod()
 else:
-    pass
+    print('znach=0')
