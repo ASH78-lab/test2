@@ -125,6 +125,7 @@ def pin_tod():
     for i in abc:
         URL = i
         req = requests.get(URL, headers=headers)
+        print(f"Status Code: {req.status_code}")
         src = req.text
         soup = BeautifulSoup(src, 'lxml')
         a=soup.text
