@@ -94,7 +94,7 @@ for i in c2:
 asd = dict(zip(c4, c3))
 pot2=[]
 for key, value in asd.items():
-    if value >1:
+    if value >0:
         
         pot2.append(key)
     
@@ -122,303 +122,310 @@ date_new256=f+'.'+d+'.'+c+'  '+ty
 
 
 data=[]
-  
+many=0 
 for i in all_pin:
     driver.get(i) 
     time.sleep(20)
-    try:
-        tournemebt=driver.find_elements(By.CLASS_NAME, 'textLabel-lNJMfvP1Hd')[1].text
-        if "UEFA - Nations League" in tournemebt:
-            tournemebt="UEFA - Nations League"
-        elif "Regions Path" in tournemebt:
-            tournemebt="Russia - Cup"
-        elif "Spain - Super Cup" in tournemebt:
-            tournemebt="Spain - Copa del Rey"
-        elif "Italy - Super Cup" in tournemebt:
-            tournemebt="Italy - Cup"
-        elif "England - FA Cup" in tournemebt:
-            tournemebt="England - EFL Cup"
-        rd=driver.find_elements(By.XPATH,'/html/body/div[2]/div[1]/div[2]/main/div/div[4]/div/div/div')
-        er=len(rd)+1    
-    
-    
-        
-        for j in range(1,er):
-            try:
-                ert=driver.find_element(By.XPATH,f'/html/body/div[2]/div[1]/div[2]/main/div/div[4]/div[2]/div/div[{j}]').text
-            
-            
-            
-            
-            
-            
-            
-                if "HANDICAP" in ert:
-                    
-                
-                    ert=driver.find_element(By.XPATH,f'/html/body/div[2]/div[1]/div[2]/main/div/div[4]/div[2]/div/div[{c}]').text
-            
-                    
-                    current_datetime = str(datetime.now())
-                    b=current_datetime.split("-")
-                    cee=b[0]
-                    d=b[1]
-                    e=b[2].split(" ")
-                    f=e[0]
-                    date_new=f+'.'+d+'.'+cee
-                    f2=str(int(f)+1)
-                    date_new2=f2+'.'+d+'.'+cee
-                    if "TODAY" in ert:
-                    
-                
-                        ert=date_new
-                    elif "TOMORROW" in ert:
-                    
-                
-                        ert=date_new2
-                    else:
-                        ert=ert.split(", ")
-                        b255=ert[1].split(" ")
-                        c255=b255[1]
-                        date1=c255+'.'+'09'+'.'+ert[2]
-                        r255=b255[0]
-                        if r255=="SEP":
-                            u5o255="09"
-                        elif r255=="OCT":
-                            u5o255="10"
-                        elif r255=="NOV":
-                            u5o255="11"
-                        elif r255=="DEC":
-                            u5o255="12"
-                        elif r255=="JAN":
-                            u5o255="01"
-                        elif r255=="FEB":
-                            u5o255="02"
-                        elif r255=="MAR":
-                            u5o255="03"
-                        elif r255=="APR":
-                            u5o255="04"   
-                        elif r255=="MAY":
-                            u5o255="05" 
-                        elif r255=="JUN":
-                            u5o255="06" 
-                        elif r255=="JUL":
-                            u5o255="07" 
-                        elif r255=="AUG":
-                            u5o255="08" 
-                        
-                        ert=c255+'.'+u5o255+'.'+ert[2]        
-            
-                
-                elif "(Match)" in ert:
-                    
-                
-                    ert=driver.find_element(By.XPATH,f'/html/body/div[2]/div[1]/div[2]/main/div/div[4]/div[2]/div/div[{c}]').text
-            
-            
-            
-                    current_datetime = str(datetime.now())
-                    b=current_datetime.split("-")
-                    cee=b[0]
-                    d=b[1]
-                    e=b[2].split(" ")
-                    f=e[0]
-                    date_new=f+'.'+d+'.'+cee
-                    f2=str(int(f)+1)
-                    date_new2=f2+'.'+d+'.'+cee
-                    if "TODAY" in ert:
-                    
-                
-                        ert=date_new
-                    elif "TOMORROW" in ert:
-                    
-                
-                        ert=date_new2
-                    else:
-                        ert=ert.split(", ")
-                        b255=ert[1].split(" ")
-                        c255=b255[1]
-                        date1=c255+'.'+'09'+'.'+ert[2]
-                        r255=b255[0]
-                        if r255=="SEP":
-                            u5o255="09"
-                        elif r255=="OCT":
-                            u5o255="10"
-                        elif r255=="NOV":
-                            u5o255="11"
-                        elif r255=="DEC":
-                            u5o255="12"
-                        elif r255=="JAN":
-                            u5o255="01"
-                        elif r255=="FEB":
-                            u5o255="02"
-                        elif r255=="MAR":
-                            u5o255="03"
-                        elif r255=="APR":
-                            u5o255="04"   
-                        elif r255=="MAY":
-                            u5o255="05" 
-                        elif r255=="JUN":
-                            u5o255="06" 
-                        elif r255=="JUL":
-                            u5o255="07" 
-                        elif r255=="AUG":
-                            u5o255="08" 
-                        
-                        ert=c255+'.'+u5o255+'.'+ert[2]
-            
-            
-            
-            
-            
-                
-                else:
-                    ert=driver.find_element(By.XPATH,f'/html/body/div[2]/div[1]/div[2]/main/div/div[4]/div[2]/div/div[{j}]').text
-                    c=j
-            
-                    current_datetime = str(datetime.now())
-                    b=current_datetime.split("-")
-                    cee=b[0]
-                    d=b[1]
-                    e=b[2].split(" ")
-                    f=e[0]
-                    date_new=f+'.'+d+'.'+cee
-                    f2=str(int(f)+1)
-                    date_new2=f2+'.'+d+'.'+cee
-                    
-                    if "TODAY" in ert:
-                    
-                
-                        ert=date_new
-                    elif "TOMORROW" in ert:
-                    
-                
-                        ert=date_new2
-                    else:
-                    
-                
-                        ert=driver.find_element(By.XPATH,f'/html/body/div[2]/div[1]/div[2]/main/div/div[4]/div[2]/div/div[{j}]').text
-                        
-                        ert=ert.split(", ")
-                        b255=ert[1].split(" ")
-                        c255=b255[1]
-                        date1=c255+'.'+'09'+'.'+ert[2]
-                        r255=b255[0]
-                        if r255=="SEP":
-                            u5o255="09"
-                        elif r255=="OCT":
-                            u5o255="10"
-                        elif r255=="NOV":
-                            u5o255="11"
-                        elif r255=="DEC":
-                            u5o255="12"
-                        elif r255=="JAN":
-                            u5o255="01"
-                        elif r255=="FEB":
-                            u5o255="02"
-                        elif r255=="MAR":
-                            u5o255="03"
-                        elif r255=="APR":
-                            u5o255="04"   
-                        elif r255=="MAY":
-                            u5o255="05" 
-                        elif r255=="JUN":
-                            u5o255="06" 
-                        elif r255=="JUL":
-                            u5o255="07" 
-                        elif r255=="AUG":
-                            u5o255="08" 
-                            
-                        ert=c255+'.'+u5o255+'.'+ert[2]
-            
-            
-            
-            
-            
-             
-            
-             
-                try:
-                        ert2=driver.find_element(By.XPATH,f'/html/body/div[2]/div[1]/div[2]/main/div/div[4]/div[2]/div/div[{j}]/div[1]/div/a/div/div/div[3]').text
-                        ert209=ert2.split(":")
-                        ert210=int(ert209[0])+3
-                        ert211=str(ert210)+":"+ert209[1]
-                        
-                        
-                    
-                        
-                    
-                except NoSuchElementException:
-                        ert211='-'
-                        
-                try:
-                    ert3=driver.find_element(By.XPATH,f'/html/body/div[2]/div[1]/div[2]/main/div/div[4]/div[2]/div/div[{j}]/div[1]/div/a/div/div/div[1]/span').text
-                    ert3=ert3.split(" (")
-                    ert3=ert3[0]
-                    
-                except NoSuchElementException:
-                    ert3='-'
-                try:
-                    ert4=driver.find_element(By.XPATH,f'/html/body/div[2]/div[1]/div[2]/main/div/div[4]/div[2]/div/div[{j}]/div[1]/div/a/div/div/div[2]/span').text
-                    ert4=ert4.split(" (")
-                    ert4=ert4[0]
-                    
-                except NoSuchElementException:
-                    ert4='-'
-                        
-                try:
-                    ert5=driver.find_element(By.XPATH,f'/html/body/div[2]/div[1]/div[2]/main/div/div[4]/div[2]/div/div[{j}]/div[2]/div[1]/button/span').text
-                   
-                    #ert5=float(ert5)
-            
-                    
-                except NoSuchElementException:
-                    ert5='-'
-                try:
-                    ert6=driver.find_element(By.XPATH,f'/html/body/div[2]/div[1]/div[2]/main/div/div[4]/div[2]/div/div[{j}]/div[2]/div[2]/button/span').text
-                   
-                    #ert6=float(ert6)
-                    
-                except NoSuchElementException:
-                    ert6='-'
-                        
-                try:
-                    ert7=driver.find_element(By.XPATH,f'/html/body/div[2]/div[1]/div[2]/main/div/div[4]/div[2]/div/div[{j}]/div[2]/div[3]/button/span').text
-                    
-                    #ert7=float(ert7)
-                    
-                except NoSuchElementException:
-                    ert7='-'
-                try:
-                    ert8=driver.find_element(By.XPATH,f'/html/body/div[2]/div[1]/div[2]/main/div/div[4]/div[2]/div/div[{j}]/div[3]/div[1]/button/span[1]').text
-                   
-                    #ert8=float(ert8)
-                    
-                except NoSuchElementException:
-                    ert8='-'
-                        
-                try:
-                    ert9=driver.find_element(By.XPATH,f'/html/body/div[2]/div[1]/div[2]/main/div/div[4]/div[2]/div/div[{j}]/div[3]/div[1]/button/span[2]').text
-                    
-                    #ert9=float(ert9)
-                    
-                except NoSuchElementException:
-                    ert9='-'
-                        
-                try:
-                    ert10=driver.find_element(By.XPATH,f'/html/body/div[2]/div[1]/div[2]/main/div/div[4]/div[2]/div/div[{j}]/div[3]/div[2]/button/span[2]').text
-                    
-                    #ert10=float(ert10)
-                    
-                except NoSuchElementException:
-                    ert10='-'
-                ert11=date_new256
-                        
-                data.append([ert,ert211,tournemebt,ert3,ert4,ert5,ert6,ert7,ert8,ert9,ert10,ert11])
-            except (NoSuchElementException,IndexError):
-                pass
+    proverka=driver.find_element(By.CLASS_NAME, 'container-r_ftB5CR45').text
+    if '(Match)' in proverka:
 
-    except (NoSuchElementException,IndexError):
+
+        try:
+            many=many+1
+            tournemebt=driver.find_elements(By.CLASS_NAME, 'textLabel-lNJMfvP1Hd')[1].text
+            if "UEFA - Nations League" in tournemebt:
+                tournemebt="UEFA - Nations League"
+            elif "Regions Path" in tournemebt:
+                tournemebt="Russia - Cup"
+            elif "Spain - Super Cup" in tournemebt:
+                tournemebt="Spain - Copa del Rey"
+            elif "Italy - Super Cup" in tournemebt:
+                tournemebt="Italy - Cup"
+            elif "England - FA Cup" in tournemebt:
+                tournemebt="England - EFL Cup"
+            rd=driver.find_elements(By.XPATH,'/html/body/div[2]/div[1]/div[2]/main/div/div[4]/div/div/div')
+            er=len(rd)+1    
+        
+        
+            
+            for j in range(1,er):
+                try:
+                    ert=driver.find_element(By.XPATH,f'/html/body/div[2]/div[1]/div[2]/main/div/div[4]/div[2]/div/div[{j}]').text
+                
+                
+                
+                
+                
+                
+                
+                    if "HANDICAP" in ert:
+                        
+                    
+                        ert=driver.find_element(By.XPATH,f'/html/body/div[2]/div[1]/div[2]/main/div/div[4]/div[2]/div/div[{c}]').text
+                
+                        
+                        current_datetime = str(datetime.now())
+                        b=current_datetime.split("-")
+                        cee=b[0]
+                        d=b[1]
+                        e=b[2].split(" ")
+                        f=e[0]
+                        date_new=f+'.'+d+'.'+cee
+                        f2=str(int(f)+1)
+                        date_new2=f2+'.'+d+'.'+cee
+                        if "TODAY" in ert:
+                        
+                    
+                            ert=date_new
+                        elif "TOMORROW" in ert:
+                        
+                    
+                            ert=date_new2
+                        else:
+                            ert=ert.split(", ")
+                            b255=ert[1].split(" ")
+                            c255=b255[1]
+                            date1=c255+'.'+'09'+'.'+ert[2]
+                            r255=b255[0]
+                            if r255=="SEP":
+                                u5o255="09"
+                            elif r255=="OCT":
+                                u5o255="10"
+                            elif r255=="NOV":
+                                u5o255="11"
+                            elif r255=="DEC":
+                                u5o255="12"
+                            elif r255=="JAN":
+                                u5o255="01"
+                            elif r255=="FEB":
+                                u5o255="02"
+                            elif r255=="MAR":
+                                u5o255="03"
+                            elif r255=="APR":
+                                u5o255="04"   
+                            elif r255=="MAY":
+                                u5o255="05" 
+                            elif r255=="JUN":
+                                u5o255="06" 
+                            elif r255=="JUL":
+                                u5o255="07" 
+                            elif r255=="AUG":
+                                u5o255="08" 
+                            
+                            ert=c255+'.'+u5o255+'.'+ert[2]        
+                
+                    
+                    elif "(Match)" in ert:
+                        
+                    
+                        ert=driver.find_element(By.XPATH,f'/html/body/div[2]/div[1]/div[2]/main/div/div[4]/div[2]/div/div[{c}]').text
+                
+                
+                
+                        current_datetime = str(datetime.now())
+                        b=current_datetime.split("-")
+                        cee=b[0]
+                        d=b[1]
+                        e=b[2].split(" ")
+                        f=e[0]
+                        date_new=f+'.'+d+'.'+cee
+                        f2=str(int(f)+1)
+                        date_new2=f2+'.'+d+'.'+cee
+                        if "TODAY" in ert:
+                        
+                    
+                            ert=date_new
+                        elif "TOMORROW" in ert:
+                        
+                    
+                            ert=date_new2
+                        else:
+                            ert=ert.split(", ")
+                            b255=ert[1].split(" ")
+                            c255=b255[1]
+                            date1=c255+'.'+'09'+'.'+ert[2]
+                            r255=b255[0]
+                            if r255=="SEP":
+                                u5o255="09"
+                            elif r255=="OCT":
+                                u5o255="10"
+                            elif r255=="NOV":
+                                u5o255="11"
+                            elif r255=="DEC":
+                                u5o255="12"
+                            elif r255=="JAN":
+                                u5o255="01"
+                            elif r255=="FEB":
+                                u5o255="02"
+                            elif r255=="MAR":
+                                u5o255="03"
+                            elif r255=="APR":
+                                u5o255="04"   
+                            elif r255=="MAY":
+                                u5o255="05" 
+                            elif r255=="JUN":
+                                u5o255="06" 
+                            elif r255=="JUL":
+                                u5o255="07" 
+                            elif r255=="AUG":
+                                u5o255="08" 
+                            
+                            ert=c255+'.'+u5o255+'.'+ert[2]
+                
+                
+                
+                
+                
+                    
+                    else:
+                        ert=driver.find_element(By.XPATH,f'/html/body/div[2]/div[1]/div[2]/main/div/div[4]/div[2]/div/div[{j}]').text
+                        c=j
+                
+                        current_datetime = str(datetime.now())
+                        b=current_datetime.split("-")
+                        cee=b[0]
+                        d=b[1]
+                        e=b[2].split(" ")
+                        f=e[0]
+                        date_new=f+'.'+d+'.'+cee
+                        f2=str(int(f)+1)
+                        date_new2=f2+'.'+d+'.'+cee
+                        
+                        if "TODAY" in ert:
+                        
+                    
+                            ert=date_new
+                        elif "TOMORROW" in ert:
+                        
+                    
+                            ert=date_new2
+                        else:
+                        
+                    
+                            ert=driver.find_element(By.XPATH,f'/html/body/div[2]/div[1]/div[2]/main/div/div[4]/div[2]/div/div[{j}]').text
+                            
+                            ert=ert.split(", ")
+                            b255=ert[1].split(" ")
+                            c255=b255[1]
+                            date1=c255+'.'+'09'+'.'+ert[2]
+                            r255=b255[0]
+                            if r255=="SEP":
+                                u5o255="09"
+                            elif r255=="OCT":
+                                u5o255="10"
+                            elif r255=="NOV":
+                                u5o255="11"
+                            elif r255=="DEC":
+                                u5o255="12"
+                            elif r255=="JAN":
+                                u5o255="01"
+                            elif r255=="FEB":
+                                u5o255="02"
+                            elif r255=="MAR":
+                                u5o255="03"
+                            elif r255=="APR":
+                                u5o255="04"   
+                            elif r255=="MAY":
+                                u5o255="05" 
+                            elif r255=="JUN":
+                                u5o255="06" 
+                            elif r255=="JUL":
+                                u5o255="07" 
+                            elif r255=="AUG":
+                                u5o255="08" 
+                                
+                            ert=c255+'.'+u5o255+'.'+ert[2]
+                
+                
+                
+                
+                
+                
+                
+                
+                    try:
+                            ert2=driver.find_element(By.XPATH,f'/html/body/div[2]/div[1]/div[2]/main/div/div[4]/div[2]/div/div[{j}]/div[1]/div/a/div/div/div[3]').text
+                            ert209=ert2.split(":")
+                            ert210=int(ert209[0])+3
+                            ert211=str(ert210)+":"+ert209[1]
+                            
+                            
+                        
+                            
+                        
+                    except NoSuchElementException:
+                            ert211='-'
+                            
+                    try:
+                        ert3=driver.find_element(By.XPATH,f'/html/body/div[2]/div[1]/div[2]/main/div/div[4]/div[2]/div/div[{j}]/div[1]/div/a/div/div/div[1]/span').text
+                        ert3=ert3.split(" (")
+                        ert3=ert3[0]
+                        
+                    except NoSuchElementException:
+                        ert3='-'
+                    try:
+                        ert4=driver.find_element(By.XPATH,f'/html/body/div[2]/div[1]/div[2]/main/div/div[4]/div[2]/div/div[{j}]/div[1]/div/a/div/div/div[2]/span').text
+                        ert4=ert4.split(" (")
+                        ert4=ert4[0]
+                        
+                    except NoSuchElementException:
+                        ert4='-'
+                            
+                    try:
+                        ert5=driver.find_element(By.XPATH,f'/html/body/div[2]/div[1]/div[2]/main/div/div[4]/div[2]/div/div[{j}]/div[2]/div[1]/button/span').text
+                    
+                        #ert5=float(ert5)
+                
+                        
+                    except NoSuchElementException:
+                        ert5='-'
+                    try:
+                        ert6=driver.find_element(By.XPATH,f'/html/body/div[2]/div[1]/div[2]/main/div/div[4]/div[2]/div/div[{j}]/div[2]/div[2]/button/span').text
+                    
+                        #ert6=float(ert6)
+                        
+                    except NoSuchElementException:
+                        ert6='-'
+                            
+                    try:
+                        ert7=driver.find_element(By.XPATH,f'/html/body/div[2]/div[1]/div[2]/main/div/div[4]/div[2]/div/div[{j}]/div[2]/div[3]/button/span').text
+                        
+                        #ert7=float(ert7)
+                        
+                    except NoSuchElementException:
+                        ert7='-'
+                    try:
+                        ert8=driver.find_element(By.XPATH,f'/html/body/div[2]/div[1]/div[2]/main/div/div[4]/div[2]/div/div[{j}]/div[3]/div[1]/button/span[1]').text
+                    
+                        #ert8=float(ert8)
+                        
+                    except NoSuchElementException:
+                        ert8='-'
+                            
+                    try:
+                        ert9=driver.find_element(By.XPATH,f'/html/body/div[2]/div[1]/div[2]/main/div/div[4]/div[2]/div/div[{j}]/div[3]/div[1]/button/span[2]').text
+                        
+                        #ert9=float(ert9)
+                        
+                    except NoSuchElementException:
+                        ert9='-'
+                            
+                    try:
+                        ert10=driver.find_element(By.XPATH,f'/html/body/div[2]/div[1]/div[2]/main/div/div[4]/div[2]/div/div[{j}]/div[3]/div[2]/button/span[2]').text
+                        
+                        #ert10=float(ert10)
+                        
+                    except NoSuchElementException:
+                        ert10='-'
+                    ert11=date_new256
+                            
+                    data.append([ert,ert211,tournemebt,ert3,ert4,ert5,ert6,ert7,ert8,ert9,ert10,ert11])
+                except (NoSuchElementException,IndexError):
+                    pass
+
+        except (NoSuchElementException,IndexError):
+            pass
+    else:
         pass
                 
                 
@@ -446,14 +453,15 @@ print(date_new533)
 b123=time.time()
 delta1=b123-a123
 name_fun='Pinnacle'
+
 data=[]
-data.append([date_new53,date_new533,delta1,name_fun])
+data.append([date_new53,date_new533,delta1,name_fun,many])
 
 
 header = ['run',
     'end',
     'delta',
-    'name']
+    'name','many']
 df2 = pd.DataFrame(data, columns=header)
 print(df,df2)
 TOKEN2 = os.getenv('TOKEN2')
