@@ -505,7 +505,7 @@ def pin_all():
     wks2.update([df7.columns.values.tolist()]+df7.values.tolist())
 
 
-
+import gspread
 gc = gspread.service_account_from_dict(credentials)
 
 
