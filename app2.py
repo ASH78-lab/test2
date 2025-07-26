@@ -394,7 +394,7 @@ def pin_tod():
                         
                         ert11=date_new256
                         
-                        data.append([ert,ert2,tournemebt,ert3,ert4,ert5,ert6,ert7,ert8,ert9,ert10,ert11])
+                        data.append([ert,ert211,tournemebt,ert3,ert4,ert5,ert6,ert7,ert8,ert9,ert10,ert11])
                 except IndexError:
                     pass
                 
