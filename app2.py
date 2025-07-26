@@ -161,15 +161,15 @@ def pin_tod():
     from datetime import datetime
     current_datetime = str(datetime.now())
     b=current_datetime.split("-")
-    g=b[0]
-    c=g
+    c=b[0]
     d=b[1]
     e=b[2].split(" ")
     f=e[0]
     g=e[1]
     kl=g.split(".")
     io=kl[0]
-    date_new256=f+'.'+d+'.'+c+'  '+io
+    ty=io.replace(io[:2],str(int(io[:2])+3))
+    date_new256=f+'.'+d+'.'+c+'  '+ty
 
     wks2 = gc.open("Test789").get_worksheet(0)
     list_of_lists = wks2.get_all_values()
@@ -251,15 +251,15 @@ def pin_tod():
     from datetime import datetime
     current_datetime = str(datetime.now())
     b=current_datetime.split("-")
-    g=b[0]
-    c=g
+    c=b[0]
     d=b[1]
     e=b[2].split(" ")
     f=e[0]
     g=e[1]
     kl=g.split(".")
     io=kl[0]
-    date_new256=f+'.'+d+'.'+c+'  '+io
+    ty=io.replace(io[:2],str(int(io[:2])+3))
+    date_new256=f+'.'+d+'.'+c+'  '+ty
         
     many=0   
         
@@ -322,9 +322,12 @@ def pin_tod():
                         ert=date_new
                         
                         try:
-                            ert2=driver.find_element(By.XPATH,f'/html/body/div[2]/div[1]/div[2]/main/div/div[4]/div/div/div[{j}]/div[1]/div/a/div/div/div[3]').text
+                            ert2=driver.find_element(By.XPATH,f'/html/body/div[2]/div[1]/div[2]/main/div/div[4]/div[2]/div/div[{j}]/div[1]/div/a/div/div/div[3]').text
+                            ert209=ert2.split(":")
+                            ert210=int(ert209[0])+3
+                            ert211=str(ert210)+":"+ert209[1]
                         except NoSuchElementException:
-                                ert2='-'
+                            ert211='-'
                                     
                         try:
                             ert3=driver.find_element(By.XPATH,f'/html/body/div[2]/div[1]/div[2]/main/div/div[4]/div/div/div[{j}]/div[1]/div/a/div/div/div[1]/span').text
@@ -437,8 +440,11 @@ def pin_tod():
                      
                     try:
                         ert2=driver.find_element(By.XPATH,f'/html/body/div[2]/div[1]/div[2]/main/div/div[4]/div[2]/div/div[{j}]/div[1]/div/a/div/div/div[3]').text
+                        ert209=ert2.split(":")
+                        ert210=int(ert209[0])+3
+                        ert211=str(ert210)+":"+ert209[1]
                     except NoSuchElementException:
-                            ert2='-'
+                        ert211='-'
                 
                     try:
                         ert3=driver.find_element(By.XPATH,f'/html/body/div[2]/div[1]/div[2]/main/div/div[4]/div[2]/div/div[{j}]/div[1]/div/a/div/div/div[1]/span').text
@@ -505,7 +511,7 @@ def pin_tod():
                     
                     ert11=date_new256
                     
-                    data.append([ert,ert2,tournemebt,ert3,ert4,ert5,ert6,ert7,ert8,ert9,ert10,ert11])
+                    data.append([ert,ert211,tournemebt,ert3,ert4,ert5,ert6,ert7,ert8,ert9,ert10,ert11])
     
     
             except IndexError:
