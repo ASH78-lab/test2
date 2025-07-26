@@ -32,7 +32,6 @@ from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import TimeoutException
 
 def pin_tod():
-    import time
     import requests
     from bs4 import BeautifulSoup
     import pandas as pd
@@ -44,7 +43,7 @@ def pin_tod():
             'Referer': 'habr.com'
             }
         
-    abc=[
+    abc5=[
         'https://www.betexplorer.com/football/england/efl-cup/fixtures/',
         'https://www.betexplorer.com/football/england/fa-cup/fixtures/',
         'https://www.betexplorer.com/football/england/premier-league/fixtures/',
@@ -83,6 +82,41 @@ def pin_tod():
         
         # https://www.betexplorer.com/football/england/fa-cup/fixtures/
         ]
+    
+    abc=['England - EFL Cup', 
+         '-', 
+         'England - Premier League',
+           'England - Community Shield', 
+           'England - Championship',
+             '-', 
+             'France - Ligue 1', 
+             '-', 
+             'Germany - Bundesliga',
+               '-', 
+               'Germany - Super Cup',
+               'Germany - Bundesliga 2', 
+               '-', 
+               'Italy - Serie A', 
+               '-', 
+               '-', 
+               'Spain - La Liga', 
+               '-',
+               '-', 
+               '-', 
+               'Russia - Premier League',
+                 '-', 
+                 'Russia - First League', 
+                 'UEFA - Champions League', 
+                 '-', 
+                 '-', 
+                 '-', 
+                 '-', 
+                 '-', 
+                 '-', 
+                 '-', 
+                 '-',
+                   '-', 
+                   'FIFA - World Cup Qualifiers Europe']
     epl=[
         'https://www.apuestasegura.xyz/en/soccer/england-efl-cup/matchups/#period:0',
         'https://www.apuestasegura.xyz/en/soccer/england-fa-cup/matchups/#period:0',
@@ -123,16 +157,33 @@ def pin_tod():
     slovar2= dict(zip(abc,epl))
         
     new=[]
+
+    from datetime import datetime
+    current_datetime = str(datetime.now())
+    b=current_datetime.split("-")
+    g=b[0]
+    c=g
+    d=b[1]
+    e=b[2].split(" ")
+    f=e[0]
+    g=e[1]
+    kl=g.split(".")
+    io=kl[0]
+    date_new256=f+'.'+d+'.'+c+'  '+io
+
+    wks2 = gc.open("Test789").get_worksheet(0)
+    list_of_lists = wks2.get_all_values()
+    df50 = pd.DataFrame(list_of_lists)
+
+    today=f+'.'+d+'.'+c
+    filt_date_df5=df50[df50[0]==today]
+    name_league=filt_date_df5[2]
+    ert96=name_league.drop_duplicates()
+    ert97=ert96.to_list()
+
     for i in abc:
-        
-        URL = i
-        time.sleep(2)
-        req = requests.get(URL, headers=headers)
-        print(f"Status Code: {req.status_code}")
-        src = req.text
-        soup = BeautifulSoup(src, 'lxml')
-        a=soup.text
-        if "Today" in a:
+
+        if i in ert97:
             new.append(slovar2[i])
         else:
             pass
@@ -196,27 +247,26 @@ def pin_tod():
     
     
     
+    
     from datetime import datetime
     current_datetime = str(datetime.now())
     b=current_datetime.split("-")
-    c=b[0]
+    g=b[0]
+    c=g
     d=b[1]
     e=b[2].split(" ")
     f=e[0]
     g=e[1]
     kl=g.split(".")
     io=kl[0]
-    ty=io.replace(io[:2],str(int(io[:2])+3))
-    date_new256=f+'.'+d+'.'+c+'  '+ty
+    date_new256=f+'.'+d+'.'+c+'  '+io
         
-        
+    many=0   
         
         
     #---------------------------------------
-    print(new)
     data=[]
     for i in new:
-        print(i)
         driver.get(i)
         time.sleep(11)
             
@@ -247,6 +297,7 @@ def pin_tod():
                         tournemebt="England - EFL Cup"
                     rd=driver.find_elements(By.XPATH,"/html/body/div[2]/div[1]/div[2]/main/div/div[4]/div/div/div")
                     er=len(rd)+1
+                    many=many+1
                         
     
                     
@@ -272,11 +323,8 @@ def pin_tod():
                         
                         try:
                             ert2=driver.find_element(By.XPATH,f'/html/body/div[2]/div[1]/div[2]/main/div/div[4]/div/div/div[{j}]/div[1]/div/a/div/div/div[3]').text
-                            ert209=ert2.split(":")
-                            ert210=int(ert209[0])+3
-                            ert211=str(ert210)+":"+ert209[1]
                         except NoSuchElementException:
-                                ert211='-'
+                                ert2='-'
                                     
                         try:
                             ert3=driver.find_element(By.XPATH,f'/html/body/div[2]/div[1]/div[2]/main/div/div[4]/div/div/div[{j}]/div[1]/div/a/div/div/div[1]/span').text
@@ -343,7 +391,7 @@ def pin_tod():
                         
                         ert11=date_new256
                         
-                        data.append([ert,ert211,tournemebt,ert3,ert4,ert5,ert6,ert7,ert8,ert9,ert10,ert11])
+                        data.append([ert,ert2,tournemebt,ert3,ert4,ert5,ert6,ert7,ert8,ert9,ert10,ert11])
                 except IndexError:
                     pass
                 
@@ -363,6 +411,7 @@ def pin_tod():
                     tournemebt="England - EFL Cup"
                 rd=driver.find_elements(By.XPATH,"/html/body/div[2]/div[1]/div[2]/main/div/div[4]/div[2]/div/div")
                 er=len(rd)+1
+                many=many+1
                              
             #except IndexError:
                 #pass
@@ -388,11 +437,8 @@ def pin_tod():
                      
                     try:
                         ert2=driver.find_element(By.XPATH,f'/html/body/div[2]/div[1]/div[2]/main/div/div[4]/div[2]/div/div[{j}]/div[1]/div/a/div/div/div[3]').text
-                        ert209=ert2.split(":")
-                        ert210=int(ert209[0])+3
-                        ert211=str(ert210)+":"+ert209[1]
                     except NoSuchElementException:
-                            ert211='-'
+                            ert2='-'
                 
                     try:
                         ert3=driver.find_element(By.XPATH,f'/html/body/div[2]/div[1]/div[2]/main/div/div[4]/div[2]/div/div[{j}]/div[1]/div/a/div/div/div[1]/span').text
@@ -459,7 +505,7 @@ def pin_tod():
                     
                     ert11=date_new256
                     
-                    data.append([ert,ert211,tournemebt,ert3,ert4,ert5,ert6,ert7,ert8,ert9,ert10,ert11])
+                    data.append([ert,ert2,tournemebt,ert3,ert4,ert5,ert6,ert7,ert8,ert9,ert10,ert11])
     
     
             except IndexError:
@@ -504,13 +550,13 @@ def pin_tod():
     delta1=b123-a123
     name_fun='Pinnacle_tod'
     data=[]
-    data.append([date_new53,date_new533,delta1,name_fun])
+    data.append([date_new53,date_new533,delta1,name_fun,many])
     
     
     header = ['run',
       'end',
       'delta',
-      'name']
+      'name','many']
     df2 = pd.DataFrame(data, columns=header)
     print(df,df2)
     
@@ -553,8 +599,14 @@ df5=df5[['col1','col2']]
 
 df5=df5[df5['col2']=='pin']
 znach=int(df5['col1'])
+
+wks3 = gc.open("Test789").get_worksheet(4)
+znach2 = int(wks3.acell('A1').value)
+
 if znach==1:
-    print('znach=1')
+    pin_tod()
+elif znach2==1:
     pin_tod()
 else:
-    print('znach=0')
+    pass
+
