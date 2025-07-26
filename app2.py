@@ -322,7 +322,7 @@ def pin_tod():
                         ert=date_new
                         
                         try:
-                            ert2=driver.find_element(By.XPATH,f'/html/body/div[2]/div[1]/div[2]/main/div/div[4]/div[2]/div/div[{j}]/div[1]/div/a/div/div/div[3]').text
+                            ert2=driver.find_element(By.XPATH,f'/html/body/div[2]/div[1]/div[2]/main/div/div[4]/div/div/div[{j}]/div[1]/div/a/div/div/div[3]').text
                             ert209=ert2.split(":")
                             ert210=int(ert209[0])+3
                             ert211=str(ert210)+":"+ert209[1]
