@@ -165,6 +165,13 @@ def pin_all():
                     tournemebt="Italy - Cup"
                 elif "England - FA Cup" in tournemebt:
                     tournemebt="England - EFL Cup"
+                elif "England - Community Shield" in tournemebt:
+                    tournemebt="England - EFL Cup"
+                elif "UEFA - Super Cup" in tournemebt:
+                    tournemebt="UEFA - Champions League"
+                elif "Germany - Super Cup" in tournemebt:
+                    tournemebt="Germany - Cup"
+
                 rd=driver.find_elements(By.XPATH,'/html/body/div[2]/div[1]/div[2]/main/div/div[4]/div/div/div')
                 er=len(rd)+1    
             
