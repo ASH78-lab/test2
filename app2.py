@@ -355,7 +355,7 @@ def pin_tod():
                         try:
                             ert5=driver.find_element(By.XPATH,f'/html/body/div[2]/div[1]/div[2]/main/div/div[4]/div/div/div[{j}]/div[2]/div[1]/button/span').text
                                
-                            ert5=float(ert5)
+                            #ert5=float(ert5)
                         
                                 
                         except NoSuchElementException:
@@ -363,7 +363,7 @@ def pin_tod():
                         try:
                             ert6=driver.find_element(By.XPATH,f'/html/body/div[2]/div[1]/div[2]/main/div/div[4]/div/div/div[{j}]/div[2]/div[2]/button/span').text
                                
-                            ert6=float(ert6)
+                            #ert6=float(ert6)
                                 
                         except NoSuchElementException:
                             ert6='-'
@@ -371,14 +371,14 @@ def pin_tod():
                         try:
                             ert7=driver.find_element(By.XPATH,f'/html/body/div[2]/div[1]/div[2]/main/div/div[4]/div/div/div[{j}]/div[2]/div[3]/button/span').text
                                 
-                            ert7=float(ert7)
+                            #ert7=float(ert7)
                                 
                         except NoSuchElementException:
                             ert7='-'
                         try:
                             ert8=driver.find_element(By.XPATH,f'/html/body/div[2]/div[1]/div[2]/main/div/div[4]/div/div/div[{j}]/div[3]/div[1]/button/span[1]').text
                                
-                            ert8=float(ert8)
+                            #ert8=float(ert8)
                                 
                         except NoSuchElementException:
                             ert8='-'
@@ -386,7 +386,7 @@ def pin_tod():
                         try:
                             ert9=driver.find_element(By.XPATH,f'/html/body/div[2]/div[1]/div[2]/main/div/div[4]/div/div/div[{j}]/div[3]/div[1]/button/span[2]').text
                                 
-                            ert9=float(ert9)
+                            #ert9=float(ert9)
                                 
                         except NoSuchElementException:
                             ert9='-'
@@ -394,7 +394,7 @@ def pin_tod():
                         
                         try:
                             ert10=driver.find_element(By.XPATH,f'/html/body/div[2]/div[1]/div[2]/main/div/div[4]/div/div/div[{j}]/div[3]/div[2]/button/span[2]').text
-                            ert10=float(ert10)
+                            #ert10=float(ert10)
                                 
                         except NoSuchElementException:
                             ert10='-'
@@ -480,7 +480,7 @@ def pin_tod():
                     try:
                         ert5=driver.find_element(By.XPATH,f'/html/body/div[2]/div[1]/div[2]/main/div/div[4]/div[2]/div/div[{j}]/div[2]/div[1]/button/span').text
                            
-                        ert5=float(ert5)
+                        #ert5=float(ert5)
                     
                             
                     except NoSuchElementException:
@@ -488,7 +488,7 @@ def pin_tod():
                     try:
                         ert6=driver.find_element(By.XPATH,f'/html/body/div[2]/div[1]/div[2]/main/div/div[4]/div[2]/div/div[{j}]/div[2]/div[2]/button/span').text
                            
-                        ert6=float(ert6)
+                        #ert6=float(ert6)
                             
                     except NoSuchElementException:
                         ert6='-'
@@ -496,14 +496,14 @@ def pin_tod():
                     try:
                         ert7=driver.find_element(By.XPATH,f'/html/body/div[2]/div[1]/div[2]/main/div/div[4]/div[2]/div/div[{j}]/div[2]/div[3]/button/span').text
                             
-                        ert7=float(ert7)
+                        #ert7=float(ert7)
                             
                     except NoSuchElementException:
                         ert7='-'
                     try:
                         ert8=driver.find_element(By.XPATH,f'/html/body/div[2]/div[1]/div[2]/main/div/div[4]/div[2]/div/div[{j}]/div[3]/div[1]/button/span[1]').text
                            
-                        ert8=float(ert8)
+                        #ert8=float(ert8)
                             
                     except NoSuchElementException:
                         ert8='-'
@@ -511,7 +511,7 @@ def pin_tod():
                     try:
                         ert9=driver.find_element(By.XPATH,f'/html/body/div[2]/div[1]/div[2]/main/div/div[4]/div[2]/div/div[{j}]/div[3]/div[1]/button/span[2]').text
                             
-                        ert9=float(ert9)
+                        #ert9=float(ert9)
                             
                     except NoSuchElementException:
                         ert9='-'
@@ -519,7 +519,7 @@ def pin_tod():
                     
                     try:
                         ert10=driver.find_element(By.XPATH,f'/html/body/div[2]/div[1]/div[2]/main/div/div[4]/div[2]/div/div[{j}]/div[3]/div[2]/button/span[2]').text
-                        ert10=float(ert10)
+                        #ert10=float(ert10)
                             
                     except NoSuchElementException:
                         ert10='-'
