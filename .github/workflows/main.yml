@@ -3,9 +3,7 @@ name: Daily_bot
 
 
 on:
-
-
-
+  push:
   schedule: 
         - cron: '20 4 * * *'
 env:
