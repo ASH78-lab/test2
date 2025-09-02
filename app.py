@@ -60,7 +60,14 @@ def pin_all():
     
     
     driver.set_window_size(1800, 1000)
-    driver.get("https://www.apuestasegura.xyz/en/soccer/leagues/")
+    driver.get("https://www.apuestasegura.xyz/en/soccer/")
+    time.sleep(15)
+    
+    button = driver.find_element(By.XPATH,"/html/body/div[2]/div[1]/div[2]/main/div/div[1]/div[3]/div/a[3]")
+    button.click()
+
+
+  
     time.sleep(10)
     driver.find_element(By.TAG_NAME,'body').send_keys(Keys.END)
         
