@@ -80,7 +80,7 @@ def pin_all():
     'https://www.apuestasegura.xyz/en/soccer/england-championship/matchups/',
     'https://www.apuestasegura.xyz/en/soccer/france-cup/matchups/',
     'https://www.apuestasegura.xyz/en/soccer/france-ligue-1/matchups/',
-    'https://www.apuestasegura.xyz/en/soccer/2a/matchups/',
+    'https://www.apuestasegura.xyz/en/soccer/france-super-cup/matchups/',
     'https://www.apuestasegura.xyz/en/soccer/germany-bundesliga/matchups/',
     'https://www.apuestasegura.xyz/en/soccer/germany-cup/matchups/',
     'https://www.apuestasegura.xyz/en/soccer/germany-super-cup/matchups/',
@@ -179,6 +179,8 @@ def pin_all():
                     tournemebt="UEFA - Champions League"
                 elif "Germany - Super Cup" in tournemebt:
                     tournemebt="Germany - Cup"
+                elif "France - Super Cup" in tournemebt:
+                  tournemebt="France - Cup"
 
                 rd=driver.find_elements(By.XPATH,'/html/body/div[2]/div[1]/div[2]/main/div/div[4]/div/div/div')
                 er=len(rd)+1    
