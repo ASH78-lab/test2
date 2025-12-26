@@ -107,7 +107,8 @@ def pin_all():
     'https://www.apuestasegura.xyz/en/soccer/uefa-nations-league-d/matchups/',
     'https://www.apuestasegura.xyz/en/soccer/uefa-nations-league-playoffs/matchups/',
     'https://www.apuestasegura.xyz/en/soccer/fifa-world-cup-qualifiers-europe/matchups/',
-    'https://www.apuestasegura.xyz/en/soccer/international-friendlies/matchups/'
+    'https://www.apuestasegura.xyz/en/soccer/international-friendlies/matchups/',
+    'https://www.apuestasegura.xyz/en/soccer/fifa-world-cup/matchups/'
         
     ]
     c=driver.find_elements(By.CLASS_NAME, 'left-A8XnP7hDwq')
