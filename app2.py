@@ -90,7 +90,7 @@ def pin_tod():
            'England - Championship',
              '-', 
              'France - Ligue 1', 
-             '-', 
+             'France - Super Cup', 
              'Germany - Bundesliga',
                '-', 
                'Germany - Super Cup',
@@ -125,7 +125,7 @@ def pin_tod():
         'https://www.apuestasegura.xyz/en/soccer/england-championship/matchups/#period:0 ',
         'https://www.apuestasegura.xyz/en/soccer/france-cup/matchups/#period:0',
         'https://www.apuestasegura.xyz/en/soccer/france-ligue-1/matchups/#period:0',
-        '-',
+        'https://www.apuestasegura.xyz/en/soccer/france-super-cup/matchups/#period:0',
         'https://www.apuestasegura.xyz/en/soccer/germany-bundesliga/matchups/#period:0',
         'https://www.apuestasegura.xyz/en/soccer/germany-cup/matchups/#period:0',
         'https://www.apuestasegura.xyz/en/soccer/germany-super-cup/matchups/#period:0',
@@ -301,6 +301,8 @@ def pin_tod():
                         tournemebt="UEFA - Champions League"
                     elif "Germany - Super Cup" in tournemebt:
                         tournemebt="Germany - Cup"
+                    elif "France - Super Cup" in tournemebt:
+                        tournemebt="France - Cup"
 
                   
                     rd=driver.find_elements(By.XPATH,"/html/body/div[2]/div[1]/div[2]/main/div/div[4]/div/div/div")
@@ -426,6 +428,8 @@ def pin_tod():
                     tournemebt="UEFA - Champions League"
                 elif "Germany - Super Cup" in tournemebt:
                     tournemebt="Germany - Cup"
+                elif "France - Super Cup" in tournemebt:
+                    tournemebt="France - Cup"
 
               
                 rd=driver.find_elements(By.XPATH,"/html/body/div[2]/div[1]/div[2]/main/div/div[4]/div[2]/div/div")
