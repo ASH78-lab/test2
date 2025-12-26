@@ -92,6 +92,7 @@ def pin_all():
     'https://www.apuestasegura.xyz/en/soccer/spain-la-liga/matchups/',
     'https://www.apuestasegura.xyz/en/soccer/spain-super-cup/matchups/',
     'https://www.apuestasegura.xyz/en/soccer/russia-cup/matchups/',
+    'https://www.apuestasegura.xyz/en/soccer/russia-cup-regions-path/matchups/',
     'https://www.apuestasegura.xyz/en/soccer/russia-premier-league/matchups/',
     'https://www.apuestasegura.xyz/en/soccer/russia-super-cup/matchups/',
     'https://www.apuestasegura.xyz/en/soccer/russia-first-league/matchups/',
