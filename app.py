@@ -388,6 +388,14 @@ def pin_all():
                                 ert2=driver.find_element(By.XPATH,f'/html/body/div[2]/div[1]/div[2]/main/div/div[4]/div[2]/div/div[{j}]/div[1]/div/a/div/div/div[3]').text
                                 ert209=ert2.split(":")
                                 ert210=int(ert209[0])+3
+                          
+                                if ert210==25:
+                                    ert210=1
+                                elif ert210==26:
+                                    ert210=2
+                                elif ert210==24:
+                                    ert210=0
+                                  
                                 ert211=str(ert210)+":"+ert209[1]
                                 
                                 
