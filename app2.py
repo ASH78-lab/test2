@@ -77,25 +77,26 @@ def pin_tod():
         'https://www.betexplorer.com/football/europe/uefa-nations-league/fixtures/?stage=OU8QQ3hg',
         'https://www.betexplorer.com/football/europe/uefa-nations-league/fixtures/?stage=h4DUPN7a',
         'https://www.betexplorer.com/football/world/friendly-international/',
-        'https://www.betexplorer.com/football/world/world-championship-2026/fixtures/?stage=QmflJo77&activecountry=8bP2bXmH'
+        'https://www.betexplorer.com/football/world/world-championship-2026/fixtures/?stage=QmflJo77&activecountry=8bP2bXmH',
+        'https://www.betexplorer.com/football/world/world-cup-2026/fixtures/'
         
         
         # https://www.betexplorer.com/football/england/fa-cup/fixtures/
         ]
     
     abc=['England - EFL Cup', 
-         '-', 
+         'England - FA Cup', 
          'England - Premier League',
            'England - Community Shield', 
            'England - Championship',
-             '-', 
+             'France - Cup', 
              'France - Ligue 1', 
              'France - Super Cup', 
              'Germany - Bundesliga',
-               '-', 
+               'Germany - Cup', 
                'Germany - Super Cup',
                'Germany - Bundesliga 2', 
-               '-', 
+               'Italy - Cup', 
                'Italy - Serie A', 
                '-', 
                '-', 
@@ -107,8 +108,8 @@ def pin_tod():
                  '-', 
                  'Russia - First League', 
                  'UEFA - Champions League', 
-                 '-', 
-                 '-', 
+                 'UEFA - Europa League', 
+                 'UEFA - Conference League', 
                  '-', 
                  '-', 
                  '-', 
@@ -116,7 +117,8 @@ def pin_tod():
                  '-', 
                  '-',
                    '-', 
-                   'FIFA - World Cup Qualifiers Europe']
+                   'FIFA - World Cup Qualifiers Europe',
+                 'FIFA - World Cup']
     epl=[
         'https://www.apuestasegura.xyz/en/soccer/england-efl-cup/matchups/#period:0',
         'https://www.apuestasegura.xyz/en/soccer/england-fa-cup/matchups/#period:0',
@@ -151,7 +153,8 @@ def pin_tod():
         'https://www.apuestasegura.xyz/en/soccer/uefa-nations-league-c/matchups/#period:0',
         'https://www.apuestasegura.xyz/en/soccer/uefa-nations-league-d/matchups/#period:0',
         'https://www.apuestasegura.xyz/en/soccer/international-friendlies/matchups/#period:0',
-        'https://www.apuestasegura.xyz/en/soccer/fifa-world-cup-qualifiers-europe/matchups/#period:0'
+        'https://www.apuestasegura.xyz/en/soccer/fifa-world-cup-qualifiers-europe/matchups/#period:0',
+        'https://www.apuestasegura.xyz/en/soccer/fifa-world-cup/matchups/#period:0'
       
         ]
     slovar2= dict(zip(abc,epl))
