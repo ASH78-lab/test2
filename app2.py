@@ -100,7 +100,7 @@ def pin_tod():
                '-', 
                '-', 
                'Spain - La Liga', 
-               '-',
+               'Spain - Super Cup',
                'Russia - Cup', 
                '-', 
                'Russia - Premier League',
