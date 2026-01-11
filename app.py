@@ -390,21 +390,21 @@ def pin_all():
                                 ert210=int(ert209[0])+3
                           
 
-                                    
+                                ''' 
                                 ert_change_date=ert.split('.')
                                 ert_change_date2=ert_change_date[0]+1
-                                ert_change_date3=ert_change_date2+'.'+ert_change_date[1]+'.'+ert_change_date[2]
+                                ert_change_date3=ert_change_date2+'.'+ert_change_date[1]+'.'+ert_change_date[2]'''
                           
                           
                                 if ert210==25:
                                     ert210=1
-                                    ert=ert_change_date3
+                                    '''ert=ert_change_date3'''
                                 elif ert210==26:
                                     ert210=2
-                                    ert=ert_change_date3
+                                    '''ert=ert_change_date3'''
                                 elif ert210==24:
                                     ert210=0
-                                    ert=ert_change_date3
+                                    '''ert=ert_change_date3'''
                                   
                                 ert211=str(ert210)+":"+ert209[1]
                                 
