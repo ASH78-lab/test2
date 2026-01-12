@@ -99,7 +99,7 @@ def pin_tod():
                'Italy - Cup', 
                'Italy - Serie A', 
                '-', 
-               '-', 
+               'Spain - Copa del Rey', 
                'Spain - La Liga', 
                'Spain - Super Cup',
                'Russia - Cup', 
@@ -116,9 +116,9 @@ def pin_tod():
                  '-', 
                  '-', 
                  '-',
-                   '-', 
-                   'FIFA - World Cup Qualifiers Europe',
-                 'FIFA - World Cup']
+                '-', 
+                'FIFA - World Cup Qualifiers Europe',
+                'FIFA - World Cup']
     epl=[
         'https://www.apuestasegura.xyz/en/soccer/england-efl-cup/matchups/#period:0',
         'https://www.apuestasegura.xyz/en/soccer/england-fa-cup/matchups/#period:0',
