@@ -64,7 +64,9 @@ def whos():
   
     driver.set_window_size(1800, 1000)
     driver.get("https://1xbet.whoscored.com/") 
-    time.sleep(25)
+    time.sleep(15)
+    a=driver.find_element(By.TAG_NAME,'body')
+    print(a.text)
   
     try:
         button = driver.find_element(By.XPATH,"/html/body/div[5]/div/div[1]/div/button5")
