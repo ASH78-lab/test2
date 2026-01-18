@@ -70,7 +70,7 @@ def weath():
     time.sleep(5)
     for i in range(1,129):
         e0 = driver.find_element(By.XPATH, f"/html/body/div[1]/main/section/div/div/div/div/div/div/div/div/div/div/div/span/div/div[4]/div[2]/table/tbody/tr{[i]}/td[1]")
-      e=int(e0.text)
+        e=int(e0.text)
         
         e2 = driver.find_element(By.XPATH, f"/html/body/div[1]/main/section/div/div/div/div/div/div/div/div/div/div/div/span/div/div[4]/div[2]/table/tbody/tr{[i]}/td[2]")
         e20=e2.text
