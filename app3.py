@@ -51,9 +51,9 @@ wks3 = gc.open("Test789").get_worksheet(4)
 znach2 = int(wks3.acell('A1').value)
 
 if znach==1:
-    pin_all()
+    whos()
 elif znach2==1:
-    pin_all()
+    whos()
 else:
     pass
     
