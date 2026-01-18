@@ -146,7 +146,7 @@ def whos():
     df = pd.DataFrame(data, columns=header)
     header2 = ['1','2','3','4'] 
     df4 = pd.DataFrame(data2, columns=header2)
-    df3 = pd.concat([df,df2])
+    df3 = pd.concat([df,df4])
 
     print(df3)
   
