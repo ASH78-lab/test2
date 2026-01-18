@@ -171,6 +171,42 @@ def weath():
     import pandas as pd
     df = pd.DataFrame(data, columns=header)
     print(df)
+  
+    driver.quit()
+    date_new533 = str(datetime.now())
+    print(date_new533)
+    
+    b123=time.time()
+    delta1=b123-a123
+    name_fun='WEATHER'
+    many=0
+    
+    data=[]
+    data.append([date_new53,date_new533,delta1,name_fun,many])
+    
+    
+    header = ['run',
+        'end',
+        'delta',
+        'name','many']
+    df2 = pd.DataFrame(data, columns=header)
+    print(df,df2)
+    
+    
+    import gspread
+    gc = gspread.service_account_from_dict(credentials)
+    
+    wer = gc.open("Test789").get_worksheet(6)
+    wer.update([df.columns.values.tolist()]+df.values.tolist())
+    
+    wks2 = gc.open("Test789").get_worksheet(1)
+    list_of_lists = wks2.get_all_values()
+    df5 = pd.DataFrame(list_of_lists)
+    new_header = df5.iloc[0]
+    df5 = df5[1:]
+    df5.rename(columns=new_header, inplace=True)
+    df7=pd.concat([df5,df2])
+    wks2.update([df7.columns.values.tolist()]+df7.values.tolist())
 
 
 
