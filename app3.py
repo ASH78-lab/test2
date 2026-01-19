@@ -63,7 +63,7 @@ def whos():
     chrome_options.add_argument("--headless")
     chrome_options.add_argument("--disable-gpu")
     #driver = webdriver.Chrome(options=chrome_options)
-    driver = uc.Chrome(version_main=109,options=chrome_options)
+    driver = uc.Chrome(options=chrome_options)
   
     driver.set_window_size(1800, 1000)
     driver.get("https://1xbet.whoscored.com/") 
