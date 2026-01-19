@@ -53,7 +53,7 @@ def whos():
     import time
     from selenium.webdriver.common.keys import Keys
     import undetected_chromedriver as uc
-    driver = uc.Chrome(version_main=109)
+    
     
     
     
