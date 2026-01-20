@@ -53,11 +53,22 @@ def whos():
     import time
     from selenium.webdriver.common.keys import Keys
     import undetected_chromedriver as uc
+    import undetected_chromedriver as uc
+    from selenium import webdriver
+    
+    options = webdriver.ChromeOptions() 
+    options.add_argument("start-maximized")
+    driver = uc.Chrome(options=options)
+  
+    driver.get("https://1xbet.whoscored.com/") 
+    time.sleep(15)
+    a=driver.find_element(By.TAG_NAME,'body')
+    print(a.text)
     
     
     
     
-    
+    '''
     chrome_options = webdriver.ChromeOptions()
     chrome_options.add_argument("--no-sandbox")
     chrome_options.add_argument("--headless")
@@ -195,6 +206,7 @@ def whos():
     df5.rename(columns=new_header, inplace=True)
     df7=pd.concat([df5,df9])
     wks2.update([df7.columns.values.tolist()]+df7.values.tolist())
+    '''
 
 
 
