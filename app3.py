@@ -44,9 +44,14 @@ a123=time.time()
 def whos():
     import undetected_chromedriver as uc
     from selenium.webdriver.common.by import By
+    from selenium.webdriver.chrome.service import Service
+
+    service = Service()
+    options = webdriver.ChromeOptions()
+    
 
     
-    driver = uc.Chrome(headless=True,use_subprocess=False,version_main=109)
+    driver = uc.Chrome(headless=True,use_subprocess=False,vservice=service, options=options)
     #driver = uc.Chrome()
     driver.set_window_size(1800, 1000)
     driver.get("https://1xbet.whoscored.com/") 
