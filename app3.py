@@ -46,7 +46,7 @@ def whos():
     from selenium.webdriver.common.by import By
 
     
-    driver = uc.Chrome(headless=True,use_subprocess=False)
+    driver = uc.Chrome(headless=True,use_subprocess=False,version_main=109)
     #driver = uc.Chrome()
     driver.set_window_size(1800, 1000)
     driver.get("https://1xbet.whoscored.com/") 
