@@ -42,30 +42,24 @@ a123=time.time()
 
 
 def whos():
-    
-    import pandas as pd
-    from selenium import webdriver
+    import undetected_chromedriver as uc
     from selenium.webdriver.common.by import By
+
     
-    from selenium.webdriver.support.ui import WebDriverWait
-    from selenium.webdriver.support import expected_conditions as EC
-    
-    import time
-    from selenium.webdriver.common.keys import Keys
-    import undetected_chromedriver as uc
-    import undetected_chromedriver as uc
-    from selenium import webdriver
-    
-    chrome_options = webdriver.ChromeOptions()
-    chrome_options.add_argument("--no-sandbox")
-    chrome_options.add_argument("--headless")
-    chrome_options.add_argument("--disable-gpu")
-    chrome_options.add_argument("start-maximized")
-  
-    driver = uc.Chrome(options=chrome_options)
-  
+    driver = uc.Chrome(headless=True,use_subprocess=False)
+    #driver = uc.Chrome()
+    driver.set_window_size(1800, 1000)
     driver.get("https://1xbet.whoscored.com/") 
     time.sleep(15)
+    
+
+    
+
+
+  
+
+  
+
     a=driver.find_element(By.TAG_NAME,'body')
     print(a.text)
     
