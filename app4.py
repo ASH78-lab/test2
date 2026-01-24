@@ -146,7 +146,8 @@ def weath():
         e19 = driver.find_element(By.XPATH, f"/html/body/div[1]/main/section/div/div/div/div/div/div/div/div/div/div/div/span/div/div[4]/div[2]/table/tbody/tr{[i]}/td[17]")
         e200 = driver.find_element(By.XPATH, f"/html/body/div[1]/main/section/div/div/div/div/div/div/div/div/div/div/div/span/div/div[4]/div[2]/table/tbody/tr{[i]}/td[18]")
      
-        
+        data.append([e,e27,e32,e43,e52,e63,float(e7.text),float(e8.text),e9.text,float(e10.text),e11.text,e12.text,e13.text,float(e14.text),e15.text,float(e16.text),float(e17.text),float(e18.text),e19.text,e200.text])
+   
        #data.append([e,e27,int(e32),int(e43),int(e52),int(e63),float(e7.text),float(e8.text),int(e9.text),float(e10.text),int(e11.text),int(e12.text),int(e13.text),float(e14.text),int(e15.text),float(e16.text),float(e17.text),float(e18.text),int(e19.text),int(e200.text)])
 
     header = ['Steps',
