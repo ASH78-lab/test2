@@ -4,7 +4,6 @@ name: Daily_bot4
 
 on:
   push:
-
   schedule: 
         - cron: '20 6 * * *'
 env:
