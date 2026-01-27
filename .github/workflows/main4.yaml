@@ -1,11 +1,13 @@
 name: Daily_bot4
 
 
-
 on:
-  push:
+
+
+
+
   schedule: 
-        - cron: '25 6 * * *'
+        - cron: '40 6 * * *'
 env:
     TOKEN1: ${{ secrets.TOKEN1 }}
     TOKEN2: ${{ secrets.TOKEN2 }}
@@ -25,4 +27,4 @@ jobs:
             - name: Install Dependencies
               run: pip install -r requirements.txt 
             - name: Run App
-              run: python app4.py  
+              run: python app4.py 
