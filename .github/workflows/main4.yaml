@@ -2,6 +2,7 @@ name: Daily_bot4
 
 
 on:
+  push:
 
 
 
