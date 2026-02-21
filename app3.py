@@ -24,7 +24,7 @@ import time
 driver = uc.Chrome(headless=True,use_subprocess=False, version_main=143)
 driver.set_window_size(1800, 1000)
 '''
-driver.get("https://whoscored.com/") 
+driver.get("https://www.meteopt.com/modelos/gfs?lat=55.752&lon=37.616&lang=en") 
 time.sleep(15)
 a=driver.find_element(By.TAG_NAME,'body')
 print(a.text)
