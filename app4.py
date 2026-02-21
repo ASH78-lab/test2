@@ -62,11 +62,11 @@ def weath():
      
     
     driver.get("https://www.meteopt.com/modelos/gfs?lat=55.752&lon=37.616&lang=en")
-    time.sleep(8)
+    time.sleep(15)
     data=[]
     button = driver.find_element(By.XPATH,"/html/body/div[3]/button")
     driver.execute_script("arguments[0].click();", button)
-    time.sleep(5)
+    time.sleep(15)
     button = driver.find_element(By.XPATH,"/html/body/div[1]/main/section/div/div/div/div/div/div/div/div/div/div/div/span/div[1]/div[1]/div[3]/button")
     driver.execute_script("arguments[0].click();", button)
     time.sleep(5)
