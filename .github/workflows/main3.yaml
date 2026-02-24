@@ -3,9 +3,10 @@ name: Daily_bot3
 
 
 on:
-  push:
-  schedule: 
-        - cron: '40 5 * * *'
+    workflow_dispatch
+  #push:
+  #schedule: 
+        #- cron: '40 5 * * *'
 env:
     TOKEN1: ${{ secrets.TOKEN1 }}
     TOKEN2: ${{ secrets.TOKEN2 }}
