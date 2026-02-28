@@ -16,7 +16,7 @@ options.add_argument(f'--user-agent={custom_user_agent}')
 
 
 
-driver = uc.Chrome(options=options, version_main=143)
+driver = uc.Chrome(options=options, version_main=145)
 
 
 import time
