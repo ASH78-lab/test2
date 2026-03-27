@@ -183,6 +183,8 @@ def pin_all():
                     tournemebt="Germany - Cup"
                 elif "France - Super Cup" in tournemebt:
                   tournemebt="France - Cup"
+                elif "FIFA - World Cup" in tournemebt:
+                  tournemebt="UEFA - Nations League"
 
                 rd=driver.find_elements(By.XPATH,'/html/body/div[2]/div[1]/div[2]/main/div/div[4]/div/div/div')
                 er=len(rd)+1    
