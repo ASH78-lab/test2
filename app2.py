@@ -116,7 +116,8 @@ def pin_tod():
                  '-', 
                  '-', 
                  '-',
-                '-', 
+                 'UEFA - Nations League Playoffs',
+                'International - Friendlies', 
                 'FIFA - World Cup Qualifiers Europe',
                 'FIFA - World Cup']
     epl=[
@@ -152,6 +153,7 @@ def pin_tod():
         'https://www.apuestasegura.xyz/en/soccer/uefa-nations-league-b/matchups/#period:0',
         'https://www.apuestasegura.xyz/en/soccer/uefa-nations-league-c/matchups/#period:0',
         'https://www.apuestasegura.xyz/en/soccer/uefa-nations-league-d/matchups/#period:0',
+        'https://www.apuestasegura.xyz/en/soccer/uefa-nations-league-playoffs/matchups/#period:0',
         'https://www.apuestasegura.xyz/en/soccer/international-friendlies/matchups/#period:0',
         'https://www.apuestasegura.xyz/en/soccer/fifa-world-cup-qualifiers-europe/matchups/#period:0',
         'https://www.apuestasegura.xyz/en/soccer/fifa-world-cup/matchups/#period:0'
