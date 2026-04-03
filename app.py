@@ -60,7 +60,7 @@ def pin_all():
     
     
     driver.set_window_size(1800, 1000)
-    driver.get("https://www.apuestasegura.xyz/en/soccer/leagues/")
+    driver.get("https://www.pinnacle.com/en/soccer/leagues/")
     time.sleep(15)
 
   
@@ -74,43 +74,43 @@ def pin_all():
         
     time.sleep(5)
     link=[
-    'https://www.apuestasegura.xyz/en/soccer/england-efl-cup/matchups/',
-    'https://www.apuestasegura.xyz/en/soccer/england-fa-cup/matchups/',
-    'https://www.apuestasegura.xyz/en/soccer/england-premier-league/matchups/',
-    'https://www.apuestasegura.xyz/en/soccer/england-community-shield/matchups/',
-    'https://www.apuestasegura.xyz/en/soccer/england-championship/matchups/',
-    'https://www.apuestasegura.xyz/en/soccer/france-cup/matchups/',
-    'https://www.apuestasegura.xyz/en/soccer/france-ligue-1/matchups/',
-    'https://www.apuestasegura.xyz/en/soccer/france-super-cup/matchups/',
-    'https://www.apuestasegura.xyz/en/soccer/germany-bundesliga/matchups/',
-    'https://www.apuestasegura.xyz/en/soccer/germany-cup/matchups/',
-    'https://www.apuestasegura.xyz/en/soccer/germany-super-cup/matchups/',
-    'https://www.apuestasegura.xyz/en/soccer/germany-bundesliga-2/matchups/',
-    'https://www.apuestasegura.xyz/en/soccer/italy-cup/matchups/',
-    'https://www.apuestasegura.xyz/en/soccer/italy-serie-a/matchups/',
-    'https://www.apuestasegura.xyz/en/soccer/italy-super-cup/matchups/',
-    'https://www.apuestasegura.xyz/en/soccer/spain-copa-del-rey/matchups/',
-    'https://www.apuestasegura.xyz/en/soccer/spain-la-liga/matchups/',
-    'https://www.apuestasegura.xyz/en/soccer/spain-super-cup/matchups/',
-    'https://www.apuestasegura.xyz/en/soccer/russia-cup/matchups/',
-    'https://www.apuestasegura.xyz/en/soccer/russia-cup-regions-path/matchups/',
-    'https://www.apuestasegura.xyz/en/soccer/russia-premier-league/matchups/',
-    'https://www.apuestasegura.xyz/en/soccer/russia-super-cup/matchups/',
-    'https://www.apuestasegura.xyz/en/soccer/russia-first-league/matchups/',
-    'https://www.apuestasegura.xyz/en/soccer/uefa-champions-league/matchups/',
-    'https://www.apuestasegura.xyz/en/soccer/uefa-europa-league/matchups/',
-    'https://www.apuestasegura.xyz/en/soccer/uefa-conference-league/matchups/',
-    'https://www.apuestasegura.xyz/en/soccer/uefa-euro-qualifiers/matchups/',
-    'https://www.apuestasegura.xyz/en/soccer/uefa-euro/matchups/',
-    'https://www.apuestasegura.xyz/en/soccer/uefa-super-cup/matchups/',
-    'https://www.apuestasegura.xyz/en/soccer/uefa-nations-league-a/matchups/',
-    'https://www.apuestasegura.xyz/en/soccer/uefa-nations-league-b/matchups/',
-    'https://www.apuestasegura.xyz/en/soccer/uefa-nations-league-c/matchups/',
-    'https://www.apuestasegura.xyz/en/soccer/uefa-nations-league-d/matchups/',
-    'https://www.apuestasegura.xyz/en/soccer/uefa-nations-league-playoffs/matchups/',
-    'https://www.apuestasegura.xyz/en/soccer/fifa-world-cup-qualifiers-europe/matchups/',
-    'https://www.apuestasegura.xyz/en/soccer/international-friendlies/matchups/',
-    'https://www.apuestasegura.xyz/en/soccer/fifa-world-cup/matchups/'
+    'https://www.pinnacle.com/en/soccer/england-efl-cup/matchups/',
+    'https://www.pinnacle.com/en/soccer/england-fa-cup/matchups/',
+    'https://www.pinnacle.com/en/soccer/england-premier-league/matchups/',
+    'https://www.pinnacle.com/en/soccer/england-community-shield/matchups/',
+    'https://www.pinnacle.com/en/soccer/england-championship/matchups/',
+    'https://www.pinnacle.com/en/soccer/france-cup/matchups/',
+    'https://www.pinnacle.com/en/soccer/france-ligue-1/matchups/',
+    'https://www.pinnacle.com/en/soccer/france-super-cup/matchups/',
+    'https://www.pinnacle.com/en/soccer/germany-bundesliga/matchups/',
+    'https://www.pinnacle.com/en/soccer/germany-cup/matchups/',
+    'https://www.pinnacle.com/en/soccer/germany-super-cup/matchups/',
+    'https://www.pinnacle.com/en/soccer/germany-bundesliga-2/matchups/',
+    'https://www.pinnacle.com/en/soccer/italy-cup/matchups/',
+    'https://www.pinnacle.com/en/soccer/italy-serie-a/matchups/',
+    'https://www.pinnacle.com/en/soccer/italy-super-cup/matchups/',
+    'https://www.pinnacle.com/en/soccer/spain-copa-del-rey/matchups/',
+    'https://www.pinnacle.com/en/soccer/spain-la-liga/matchups/',
+    'https://www.pinnacle.com/en/soccer/spain-super-cup/matchups/',
+    'https://www.pinnacle.com/en/soccer/russia-cup/matchups/',
+    'https://www.pinnacle.com/en/soccer/russia-cup-regions-path/matchups/',
+    'https://www.pinnacle.com/en/soccer/russia-premier-league/matchups/',
+    'https://www.pinnacle.com/en/soccer/russia-super-cup/matchups/',
+    'https://www.pinnacle.com/en/soccer/russia-first-league/matchups/',
+    'https://www.pinnacle.com/en/soccer/uefa-champions-league/matchups/',
+    'https://www.pinnacle.com/en/soccer/uefa-europa-league/matchups/',
+    'https://www.pinnacle.com/en/soccer/uefa-conference-league/matchups/',
+    'https://www.pinnacle.com/en/soccer/uefa-euro-qualifiers/matchups/',
+    'https://www.pinnacle.com/en/soccer/uefa-euro/matchups/',
+    'https://www.pinnacle.com/en/soccer/uefa-super-cup/matchups/',
+    'https://www.pinnacle.com/en/soccer/uefa-nations-league-a/matchups/',
+    'https://www.pinnacle.com/en/soccer/uefa-nations-league-b/matchups/',
+    'https://www.pinnacle.com/en/soccer/uefa-nations-league-c/matchups/',
+    'https://www.pinnacle.com/en/soccer/uefa-nations-league-d/matchups/',
+    'https://www.pinnacle.com/en/soccer/uefa-nations-league-playoffs/matchups/',
+    'https://www.pinnacle.com/en/soccer/fifa-world-cup-qualifiers-europe/matchups/',
+    'https://www.pinnacle.com/en/soccer/international-friendlies/matchups/',
+    'https://www.pinnacle.com/en/soccer/fifa-world-cup/matchups/'
         
     ]
     c=driver.find_elements(By.CLASS_NAME, 'left-A8XnP7hDwq')
