@@ -120,10 +120,12 @@ def pin_all():
     c4=[]
     for i in c:
         c3.append(int(i.text))
+    print(c3)
               
     for i in c2:
     
         c4.append(i.get_attribute("href"))
+    print(c4)
     asd = dict(zip(c4, c3))
     pot2=[]
     for key, value in asd.items():
@@ -136,7 +138,7 @@ def pin_all():
         if i in pot2:
             all_pin.append(i+'#period:0')
     
-    
+    print(all_pin)
     
     from datetime import datetime
     current_datetime = str(datetime.now())
