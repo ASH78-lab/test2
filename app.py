@@ -251,6 +251,7 @@ def pin_all():
                         
 
                             elif "TOMORROW" in ert:
+                                print(ert)
                             
                                
                                 ert=date_new2
@@ -315,6 +316,7 @@ def pin_all():
                         
 
                             elif "TOMORROW" in ert:
+                                print(ert)
                             
                                
                                 ert=date_new2
@@ -380,6 +382,7 @@ def pin_all():
                         
 
                             elif "TOMORROW" in ert:
+                                print(date_new2)
                             
                                
                                 ert=date_new2
@@ -448,12 +451,15 @@ def pin_all():
                                 if ert210==25:
                                     ert210=1
                                     ert=ert_change_date3
+                                    ert=check_date(ert)
                                 elif ert210==26:
                                     ert210=2
                                     ert=ert_change_date3
+                                    ert=check_date(ert)
                                 elif ert210==24:
                                     ert210=0
                                     ert=ert_change_date3
+                                    ert=check_date(ert)
                                   
                                 ert211=str(ert210)+":"+ert209[1]
                                 
