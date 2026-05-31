@@ -287,7 +287,9 @@ def pin_all():
                                 elif r255=="AUG":
                                     u5o255="08" 
                                 
-                                ert=c255+'.'+u5o255+'.'+ert[2]        
+                                ert=c255+'.'+u5o255+'.'+ert[2]  
+                                
+                                ert=check_date(ert)
                     
                         
                         elif "(Match)" in ert:
@@ -349,6 +351,7 @@ def pin_all():
                                     u5o255="08" 
                                 
                                 ert=c255+'.'+u5o255+'.'+ert[2]
+                                ert=check_date(ert)
                     
                     
                     
@@ -420,6 +423,7 @@ def pin_all():
                                     u5o255="08" 
                                     
                                 ert=c255+'.'+u5o255+'.'+ert[2]
+                                ert=check_date(ert)
                     
                     
                     
