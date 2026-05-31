@@ -245,13 +245,16 @@ def pin_all():
                             f2=str(int(f)+1)
                             date_new2=f2+'.'+d+'.'+cee
                             if "TODAY" in ert:
-                            
-                        
+                                
                                 ert=date_new
+                                ert=check_date(ert)
+                        
+
                             elif "TOMORROW" in ert:
                             
-                                ert=check_date(date_new2)
-                                # ert=date_new2
+                               
+                                ert=date_new2
+                                ert=check_date(ert)
                               
                             else:
                                 ert=ert.split(", ")
@@ -305,12 +308,15 @@ def pin_all():
                             date_new2=f2+'.'+d+'.'+cee
                             if "TODAY" in ert:
                             
-                        
                                 ert=date_new
+                                ert=check_date(ert)
+                        
+
                             elif "TOMORROW" in ert:
                             
-                        
-                                ert=check_date(date_new2)
+                               
+                                ert=date_new2
+                                ert=check_date(ert)
                             else:
                                 ert=ert.split(", ")
                                 b255=ert[1].split(" ")
@@ -367,10 +373,17 @@ def pin_all():
                             
                         
                                 ert=date_new
+                                ert=check_date(ert)
+                        
+
                             elif "TOMORROW" in ert:
                             
+                               
+                                ert=date_new2
+                                ert=check_date(ert)
+                            
                         
-                                ert=check_date(date_new2)
+                                
                             else:
                             
                         
