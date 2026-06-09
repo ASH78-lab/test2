@@ -21,7 +21,7 @@ driver = uc.Chrome(options=options, version_main=145)
 import time
 
 
-driver.get("https://www.whoscored.com/") 
+driver.get("https://www.crimsonhaven46.xyz/en/standard/soccer/fifa-world-cup#period:0") 
 time.sleep(15)
 a=driver.find_element(By.TAG_NAME,'body')
 print(a.text)
