@@ -271,6 +271,7 @@ def pin_tod():
         
     #---------------------------------------
     data=[]
+    new.append('https://www.pinnacle.com/en/soccer/fifa-world-cup/matchups/#period:0')
     for i in new:
         driver.get(i)
         time.sleep(11)
