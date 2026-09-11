@@ -57,7 +57,7 @@ def asi78():
     URL = 'https://tipsters.asianbookie.com/?classic=1'
     req = requests.get(URL, headers=headers, timeout=10)
     print(req.status_code)
-    
+    print(response.headers) 
     src = req.text
     soup = BeautifulSoup(src, 'lxml')
     all_products_hrefs = soup.find(class_='showAll').find_all('a')
