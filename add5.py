@@ -156,6 +156,13 @@ def asi78():
     import pandas as pd
     header = ['0'] 
     df = pd.DataFrame(data, columns=header)
+    df[['part1', 'part2', 'part3']] = df['0'].str.split('/', expand=True)
+    
+    del df['0']
+    cols = ['part2', 'part3']
+    df[cols] = df[cols].astype(float)
+    df['max'] = df[cols].max(axis=1)
+    df = df.sort_values('max', ascending=False)
     print(df)
   
     date_new533 = str(datetime.now())
@@ -215,4 +222,4 @@ wks3 = gc.open("Test789").get_worksheet(4)
 znach2 = int(wks3.acell('A1').value)
 
 
-pin_all()
+asi78()
