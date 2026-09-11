@@ -1,10 +1,10 @@
 name: Asi78
 
 
-on:
-    workflow_dispatch:
 # on:
-#   push:
+#     workflow_dispatch:
+on:
+  push:
 #   schedule: 
 #         - cron: '00 00 * * *'
 env:
