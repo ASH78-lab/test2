@@ -1,18 +1,7 @@
 import pandas as pd
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 import time
-from selenium.webdriver.common.keys import Keys
 from datetime import datetime
 import requests
-from selenium.webdriver.firefox.options import Options
-from selenium.common.exceptions import NoSuchElementException
-from selenium.common.exceptions import TimeoutException
-
-
-
 import os
 
 
@@ -52,10 +41,178 @@ a123=time.time()
 
 
 
-def now78():
+def asi78():
 
+    from bs4 import BeautifulSoup
+    headers = {
+        'accept': '*/*',
+       'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36',
+        'Referer': 'habr.com'
+        }
+    
+   
+    URL = 'https://tipsters.asianbookie.com/?classic=1'
+    req = requests.get(URL, headers=headers)
+    
+    src = req.text
+    soup = BeautifulSoup(src, 'lxml')
+    all_products_hrefs = soup.find(class_='showAll').find_all('a')
+    len(all_products_hrefs)
+    #for i in all_products_hrefs:
+    #    print(i.get('href'))
+    #------------------------------------------------------------------------------------------  
+    all_products_hrefs = soup.find(class_='showAll').find_all('font',color="white",size="3")
+    len(all_products_hrefs)
+    #for i in all_products_hrefs:
+        #print(i.text)
+    #-------------------------------------------------------------------------------------------  
+    tyu = soup.find(class_='showAll').find_all('td',colspan="9")
+    c=len(tyu)
+    
+    ert=[]
+    
+    for i in range(1,c):
+        b="Settlement for above matches will"
+        if b in tyu[i].text:
+            ert.append(i)
+    
+    #---------------------------------------------------------------------------------------------
+    ll_products_hrefs = soup.find(class_='showAll').find_all('font',color="white",size="3")
     
     
     
+    h=ert[0]
     
-    driver.set_window_size(1800, 1000)
+    sdf=[]
+    for i in range(1,h+1):
+        a=i*8-6
+        sdf.append(a)
+    sdf[0:h]
+    
+    all_products_hrefs = soup.find(class_='showAll').find_all('a')
+    ght=[]
+    for i in all_products_hrefs:
+        ght.append(i.get('href'))
+    
+    yut=[]
+    for i in sdf:
+        yut.append('https://tipsters.asianbookie.com'+ ght[i])
+    
+    dfg=[]
+        
+    for i in yut:
+        URL = i
+        req = requests.get(URL, headers=headers)
+        src = req.text
+        soup = BeautifulSoup(src, 'lxml')
+        all_products_hrefs1 = soup.find_all('b')[1]
+        all_products_hrefs2 = soup.find_all('b')[2]
+        all_products_hrefs3 = soup.find_all('b')[4]
+        all_products_hrefs4 = soup.find_all('b')[5]
+        
+        wer=int(all_products_hrefs3.text)/(int(all_products_hrefs3.text)+int(all_products_hrefs4.text))
+        wed=1-wer
+        
+        dfg.append(f'{all_products_hrefs1.text} {all_products_hrefs2.text}/{wer}/{wed}')
+    
+    
+    l_products_hrefs=[]
+    for i in ll_products_hrefs:
+        l_products_hrefs.append(i.text)
+        
+    l_products_hrefs2=l_products_hrefs[:h]
+    slovar2= dict(zip(dfg,l_products_hrefs2))
+    slovar2
+    
+    asd=[
+        'English FA Cup',
+        'Spanish Cup',
+        'Spanish La Liga',
+        'French Ligue 1',
+        'German Bundesliga',
+        'Italian Serie A ',
+        'English Premier League',
+        'German Cup' ,
+        'Italian Cup',
+        "UEFA Champions League",
+        "UEFA Europa League",
+    "UEFA Conference League",
+    "English League Cup",
+    'European Championships',
+        'Misc'
+    
+        
+    ]
+    
+    data=[]
+    for i,b in slovar2.items():
+        if b in asd:
+            data.append(i)
+        else:
+            pass
+        
+        
+        
+    import pandas as pd
+    header = ['0'] 
+    df = pd.DataFrame(data, columns=header)
+    print(df)
+  
+    date_new533 = str(datetime.now())
+    print(date_new533)
+    
+    b123=time.time()
+    delta1=b123-a123
+    name_fun='asi78'
+    
+    data=[]
+    data.append([date_new53,date_new533,delta1,name_fun,many])
+    
+    
+    header = ['run',
+        'end',
+        'delta',
+        'name','many']
+    df2 = pd.DataFrame(data, columns=header)
+    print(df,df2)
+    
+    
+    import gspread
+    gc = gspread.service_account_from_dict(credentials)
+    
+    wer = gc.open("Test789").sheet8
+    wer.clear()
+    wer.update([df.columns.values.tolist()]+df.values.tolist())
+    
+    wks2 = gc.open("Test789").get_worksheet(1)
+    list_of_lists = wks2.get_all_values()
+    df5 = pd.DataFrame(list_of_lists)
+    new_header = df5.iloc[0]
+    df5 = df5[1:]
+    df5.rename(columns=new_header, inplace=True)
+    df7=pd.concat([df5,df2])
+    wks2.update([df7.columns.values.tolist()]+df7.values.tolist())
+
+
+import gspread
+gc = gspread.service_account_from_dict(credentials)
+
+
+wks2 = gc.open("Test789").get_worksheet(3)
+list_of_lists = wks2.get_all_values()
+df5 = pd.DataFrame(list_of_lists)
+
+new_header = df5.iloc[0]  # берем первую строку как заголовок
+df5 = df5[1:]
+# переименовываем столбцы
+df5.rename(columns=new_header, inplace=True) 
+df5=df5[['col1','col2']]
+
+df5=df5[df5['col2']=='pin']
+znach=int(df5['col1'])
+
+wks3 = gc.open("Test789").get_worksheet(4)
+znach2 = int(wks3.acell('A1').value)
+
+
+pin_all()
