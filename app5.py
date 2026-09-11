@@ -53,6 +53,7 @@ def asi78():
    
     URL = 'https://tipsters.asianbookie.com/?classic=1'
     req = requests.get(URL, headers=headers)
+    print(req.status_code)
     
     src = req.text
     soup = BeautifulSoup(src, 'lxml')
