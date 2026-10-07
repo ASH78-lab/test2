@@ -22,11 +22,11 @@ env:
 
 jobs:
     Daily-Run:
-        runs-on: Ubuntu 26 beginning
+        runs-on: ubuntu-latest
 
         steps:
             - name: Checkout Code
-              uses: actions/checkout@v5
+              uses: actions/checkout@v4
             - name: Install Dependencies
               run: pip install -r requirements.txt 
             - name: Run App
