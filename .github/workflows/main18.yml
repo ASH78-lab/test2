@@ -9,7 +9,7 @@ on:
   schedule: 
 
 
-        - cron: '22 9 * * *'
+        - cron: '45 7 * * *'
 env:
     TOKEN1: ${{ secrets.TOKEN1 }}
     TOKEN2: ${{ secrets.TOKEN2 }}
